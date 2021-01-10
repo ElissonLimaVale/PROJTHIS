@@ -1,6 +1,7 @@
 <?php 
+
 class Config {
-    public $URL = "";
+    public $URL = "http://localhost/curriculo/projthis/UI";
     public $name = "";
 }
 ?>
