@@ -1,8 +1,9 @@
 <?php
-include "../APLICATION/CONTROLLER/GlobalController.php";
+include "../CONTROLLER/GlobalController.php";
+include "../APP_SERVICE/GlobalAppService.php";
 
 if(isset($_POST["metodo"])){
-    $global = new GlobalMetodos();
+    $global = new GlobalMetodos(new GlobalController());
     switch($_POST["metodo"]){
         case "search":
             $global->search();
@@ -11,18 +12,16 @@ if(isset($_POST["metodo"])){
 }
 
 class GlobalMetodos {
-    protected $_controller;
+    private $_controller;
     //Construtor
     public function __construct(GlobalController $_controller){
-        $this->_controller = $_cpntroller;
+        $this->_controller = $_controller;
     }
 
     public function search(){
-        if(isset($_POST["search"])){
-            $response = $this->_controller->search($_POST["search"]);
-        }else{
-            $response = "error";
-        }
+
+        $response = isset($_POST["search"]) ? $this->_controller->search($_POST["search"]) : "error";
+        
         echo $response;
     }
 }

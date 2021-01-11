@@ -1,8 +1,8 @@
 <?php
-include "../INTERFACE/IGlobalAppService.php";
-include "../../INFRA/INTERFACE/IGlobalRepositry.php";
+include "INTERFACE/IGlobalAppService.php";
+include "../INFRA/INTERFACE/IGlobalRepositry.php";
 
-class GlobalAppService implements IGlobalAppService{
+class GlobalAppService implements IGlobalAppService {
     protected $_repository;
     // Construtor
     public function __construct(){
