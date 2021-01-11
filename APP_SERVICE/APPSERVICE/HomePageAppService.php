@@ -1,9 +1,9 @@
 <?php 
-include "INTERFACE/IHomePageAppServices.php";
+include "../INTERFACE/IHomePageAppServices.php";
 
 class HomePageAppServoce implements IHomePageAppServices
 {
-    public function searchServie($string){
+    public function search($string){
         if(searchDomain($string)){
             return searchInfra($string);
         }

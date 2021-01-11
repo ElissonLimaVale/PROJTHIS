@@ -1,14 +1,14 @@
 <?php
 include "../APP_SERVICE/INTERFACE/IHomePageAppService.php";
-class HomePage{
+class HomePageController{
     protected $_appservice;
     //contrutor da classe
-    public function __construct(IHomePageAppService $_appservice){
-        $this->_appservice = $_appservice;
+    public function __construct(){
+        $this->_appservice = new IHomePageAppService();
     }
     
     public function search($string){
-        $response = $this->_appservice->searchServie($string);
+        $response = $this->_appservice->search($string);
         echo $response;
     }
 

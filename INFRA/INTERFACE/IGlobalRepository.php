@@ -1,5 +1,5 @@
 <?php
-interface IHomePageRepository{
+interface IGlobalRepository{
     //Métodos de interface
     public function search($string);
 }

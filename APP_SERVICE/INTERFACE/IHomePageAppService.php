@@ -1,6 +1,6 @@
 <?php
 interface IHomePageAppService {
-    #metodos de interface
+    //métodos de interface
     public function searchServie($string);
 }
 
