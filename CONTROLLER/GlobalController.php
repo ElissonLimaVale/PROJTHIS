@@ -1,11 +1,12 @@
 <?php
 include "../APP_SERVICE/INTERFACE/IGlobalAppService.php";
+include "../APP_SERVICE/GlobalAppService.php";
 
-class GlobalController{
+class GlobalController {
     protected $_appservice;
 
     function __construct(){
-        $this->_appservice = new IGlobalAppService();
+        $this->_appservice = new GlobalAppService();
     }
     //Métodos da classe
 

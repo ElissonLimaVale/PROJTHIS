@@ -1,6 +1,9 @@
 <?php
 class Conexao {
-    function conectar(){
+    public function __construct(){
+        //Ninject
+    }
+    public function conectar(){
         $server = "localhost";
         $user = "root";
         $password = "";

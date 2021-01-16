@@ -1,6 +1,6 @@
 <?php
 include "../BASE/conexao.php";
-include "../INTERFACE/IGlobalRepository.php";
+
 class GlobalRepository implements IGlobalRepository {
     protected $_conexao;
     //Construtor
@@ -9,11 +9,14 @@ class GlobalRepository implements IGlobalRepository {
     }
 
     public function search($string){
-        $conexao = $this->_conexao->conectar();
-        $query = "select * from teste where nome like '$search%'";
-        $result = mysqli_query($conexao, $query);
-        $array = mysqli_fetch_array($result);
-    
+        $conexao = $this->_conexao->conectar() == null ? false: $this->_conexao->conectar();
+        if(!$conexao){
+            return "error";
+        }else{
+            $query = "select * from teste where nome like '$search%'";
+            $result = mysqli_query($conexao, $query);
+            $array = mysqli_fetch_array($result);
+        }
         if($array == null){
             return "nada encontrado!";
         }else{
