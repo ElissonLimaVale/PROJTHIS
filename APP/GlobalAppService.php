@@ -1,6 +1,6 @@
 <?php
-include "../INFRA/INTERFACE/IGlobalRepository.php";
-include "../INFRA/Repository/GlobalRepository.php";
+include "../REPOSITORY/INTERFACE/IGlobalRepository.php";
+include "../REPOSITORY/GlobalRepository.php";
 
 class GlobalAppService implements IGlobalAppService {
     private $_repository;

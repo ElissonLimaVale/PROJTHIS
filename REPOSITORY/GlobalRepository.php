@@ -1,5 +1,5 @@
 <?php
-include "../BASE/conexao.php";
+include "BASE/conexao.php";
 
 class GlobalRepository implements IGlobalRepository {
     protected $_conexao;
@@ -7,13 +7,13 @@ class GlobalRepository implements IGlobalRepository {
     public function __construct(){
         $this->_conexao = new Conexao();
     }
-
+    // Método de busca
     public function search($string){
         $conexao = $this->_conexao->conectar() == null ? false: $this->_conexao->conectar();
         if(!$conexao){
             return "error";
         }else{
-            $query = "select * from teste where nome like '$search%'";
+            $query = "select * from teste where nome like '$string%'";
             $result = mysqli_query($conexao, $query);
             $array = mysqli_fetch_array($result);
         }

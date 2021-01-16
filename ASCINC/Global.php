@@ -1,6 +1,5 @@
 <?php
 include "../CONTROLLER/GlobalController.php";
-include "../APP_SERVICE/GlobalAppService.php";
 
 if(isset($_POST["metodo"])){
     $global = new GlobalMetodos(new GlobalController());

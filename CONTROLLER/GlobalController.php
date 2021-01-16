@@ -1,6 +1,6 @@
 <?php
-include "../APP_SERVICE/INTERFACE/IGlobalAppService.php";
-include "../APP_SERVICE/GlobalAppService.php";
+include "../APP/INTERFACE/IGlobalAppService.php";
+include "../APP/GlobalAppService.php";
 
 class GlobalController {
     protected $_appservice;
