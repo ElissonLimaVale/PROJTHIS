@@ -1,13 +1,13 @@
 <?php 
 include "BASE/conexao.php";
-include "INTERFACE/IHomePageRepository.php";
 
 class HomePageRepository implements IHomePageRepository {
-
     protected $_conexao;
-    public function __construct(Conexao $_conexao){
-        $this->_conexao = $_conexao;
+
+    public function __construct(){
+        $this->_conexao = new Conexao();
     }
+
     public function search($search){
         $conexao = $this->_conexao->conectar();
         $query = "select * from teste where nome like '$search%'";

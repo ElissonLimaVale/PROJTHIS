@@ -1,6 +1,6 @@
 <?php
-class Aplicacao {
-    //atributos
+class AplicacaoViewModel{
+    //atributos da aplicação
     public $id;
 
     public $caminho;

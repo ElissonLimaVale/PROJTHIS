@@ -1,6 +1,6 @@
 <?php
 interface IHomePageRepository{
-    #metodos de interface
+    //Métodos de interface
     public function search($string);
 }
 ?>

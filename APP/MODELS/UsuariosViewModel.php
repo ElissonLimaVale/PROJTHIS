@@ -1,5 +1,5 @@
-<?php
-class Usuario {
+<?php 
+class UsuarioViewModel {
     //atributos do usuario
     public $id;
 

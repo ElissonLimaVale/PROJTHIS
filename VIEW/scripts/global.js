@@ -106,7 +106,7 @@ function search(){
     $("#search-result-area").show();
     $.ajax({
         method: "POST",
-        url: "../APLICATION/CONTROLLER/HomePageController.php:search",
+        url: "../ASCINC/Global.php",
         data: {
             search: $("#search").val(),
             metodo: "search"

@@ -323,11 +323,14 @@ a {
         overflow: hidden;
     }
     #bottom-header {
-        width: 100%;
+        width: 50%;
         height: 10vh;
+        border-top-left-radius: 20px;
         background-color: rgba(0, 0, 0, 0.89);
         margin: 0px;
         position: fixed;
+        float: right;
+        right: 0px;
         bottom: 0px;
     }
     #number-pages {
