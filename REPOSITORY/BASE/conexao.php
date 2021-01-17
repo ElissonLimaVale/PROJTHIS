@@ -8,7 +8,7 @@ class Conexao {
         $server = "localhost";
         $user = "root";
         $password = "";
-        $base = "sqlteste";
+        $base = "projthis";
         $conexao = mysqli_connect($server, $user, $password, $base);
         if(!$conexao){
             $conexao = null;
