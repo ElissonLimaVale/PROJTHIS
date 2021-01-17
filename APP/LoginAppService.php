@@ -2,9 +2,6 @@
 
 include "../REPOSITORY/INTERFACE/ILoginRepository.php";
 include "../REPOSITORY/LoginRepository.php";
-include "MODELS/UsuarioViewModel.php";
-include "../DOMAIN/BASE/Usuario.php";
-include "../AUTOMAPER/AutoMaper.php";
 
 class LoginAppService implements ILoginAppService {
     private $_repository;
@@ -14,14 +11,14 @@ class LoginAppService implements ILoginAppService {
         $this->_mapper = new AutoMaper();
     }
 
-    public function Cadastrar(UsuarioViewModel $usuario){
+    public function Cadastrar($usuario){
         
-        return $this->_repository->Cadastrar($this->_mapper->Map($usuario, new Usuario()));
+        return $this->_repository->Cadastrar($usuario);
     }
 
-    public function Login(UsuarioViewModel $usuario){
+    public function Login( $usuario){
         
-        return $this->_repository->Login($this->_mapper->Map($usuario, new Usuario()));
+        return $this->_repository->Login($usuario);
     }
 }
 
