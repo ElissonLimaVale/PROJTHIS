@@ -1,4 +1,6 @@
-<?php include "../CONTROLLER/HomePageController.php";?>
+<?php //include "../CONTROLLER/HomePageController.php";
+include "../CONTROLLER/LoginController.php";
+?>
 <!DOCTYPE html/>
 <html>
 <head lang="pt-br">

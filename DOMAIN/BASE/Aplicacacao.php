@@ -1,4 +1,5 @@
 <?php
+
 class Aplicacao {
     //atributos
     public $id;
@@ -13,4 +14,6 @@ class Aplicacao {
 
     public $visualizacoes;
 }
+
+
 ?>

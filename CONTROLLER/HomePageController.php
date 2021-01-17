@@ -1,4 +1,5 @@
 <?php
+
 include "../APP/INTERFACE/IHomePageAppService.php";
 include "../APP/HomePageAppService.php";
 class HomePageController{
@@ -14,4 +15,5 @@ class HomePageController{
     }
 
 }
+
 ?>

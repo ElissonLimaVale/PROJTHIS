@@ -13,15 +13,20 @@ class GlobalRepository implements IGlobalRepository {
         if(!$conexao){
             return "error";
         }else{
-            $query = "select * from teste where nome like '$string%'";
+            $query = "select * from aplicacao where nome like '$string%'";
             $result = mysqli_query($conexao, $query);
+            if($result == null){
+                return "Nada encontrado!";
+            }
             $array = mysqli_fetch_array($result);
         }
         if($array == null){
-            return "nada encontrado!";
+            return "Nada encontrado!";
         }else{
             return $array["email"];
         }
     }
 }
+
+
 ?>

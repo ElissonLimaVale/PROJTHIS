@@ -5,7 +5,7 @@ include "../REPOSITORY/HomePageRepository.php";
 class HomePageAppServoce implements IHomePageAppService
 {
     private $_repository;
-    
+
     public function __construct(){
         $this->_repository = new HomePageRepository();
     }
