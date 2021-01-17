@@ -1,4 +1,5 @@
 <?php
+
 class Usuario {
     //atributos do usuario
     public $id;
@@ -14,4 +15,5 @@ class Usuario {
     public $github;
     
 }
+
 ?>

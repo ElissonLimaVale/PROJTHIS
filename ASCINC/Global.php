@@ -1,4 +1,5 @@
 <?php
+
 include "../CONTROLLER/GlobalController.php";
 
 if(isset($_POST["metodo"])){

@@ -1,4 +1,5 @@
 <?php
+
 class Conexao {
     public function __construct(){
         //Ninject
@@ -15,4 +16,6 @@ class Conexao {
         return $conexao;
     }
 }
+
+
 ?>

@@ -1,4 +1,5 @@
 <?php
+
 include "../REPOSITORY/INTERFACE/IGlobalRepository.php";
 include "../REPOSITORY/GlobalRepository.php";
 
@@ -13,4 +14,6 @@ class GlobalAppService implements IGlobalAppService {
         return $this->_repository->search($string);
     }
 }
+
+
 ?>

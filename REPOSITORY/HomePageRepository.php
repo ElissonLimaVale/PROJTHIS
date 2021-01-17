@@ -1,4 +1,4 @@
-<?php 
+<?php
 include "BASE/conexao.php";
 
 class HomePageRepository implements IHomePageRepository {
@@ -21,5 +21,6 @@ class HomePageRepository implements IHomePageRepository {
         }
     }
 }
+
 
 ?>
