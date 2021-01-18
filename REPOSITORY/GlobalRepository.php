@@ -13,7 +13,7 @@ class GlobalRepository implements IGlobalRepository {
         if(!$conexao){
             return "error conection";
         }else{
-            $query = "select * from usuario where nome like '$string%'";
+            $query = "select * from projeto where nome like '$string%'";
             $result = mysqli_query($conexao, $query);
             if($result == null){
                 return "Nada encontrado!";
