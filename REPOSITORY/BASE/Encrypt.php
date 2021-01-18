@@ -19,7 +19,7 @@ class Encrypt {
     }
 
     // Valida uma senha com o Hash
-    public function PwdValidate($senha, $hash){
+    public function ValidateHash($senha, $hash){
         $response = true;
         $pepper = $this->_config->getConfigHash();// $pepper configuração do hash
 
