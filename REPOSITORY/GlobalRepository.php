@@ -11,7 +11,7 @@ class GlobalRepository implements IGlobalRepository {
     public function search($string){
         $conexao = $this->_conexao->conectar() == null ? false: $this->_conexao->conectar();
         if(!$conexao){
-            return "error";
+            return "error conection";
         }else{
             $query = "select * from projeto where nome like '$string%'";
             $result = mysqli_query($conexao, $query);
