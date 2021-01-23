@@ -25,7 +25,10 @@ include "../CONTROLLER/LoginController.php";
         <div id="load-loop"></div>
     </div>
     <nav id="campo-menu" class="nav-top">
-        <div id="logo"></div>
+        <div>
+            <div id="menu-button"></div>
+            <div id="logo"></div>
+        </div>
         <ul class="menu">
             <li id="inicio" class="item-menu">Início</li>
             <li id="categorias" class="item-menu">Categorias</li>
@@ -114,5 +117,6 @@ include "../CONTROLLER/LoginController.php";
     
     <!-- Scripts do do site-->
     <script src="scripts/global.js"></script>
+    <script src="scripts/globalmobile.js"></script>
 </body>
 </html>
