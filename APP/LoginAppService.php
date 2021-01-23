@@ -11,14 +11,15 @@ class LoginAppService implements ILoginAppService {
         $this->_mapper = new AutoMaper();
     }
 
-    public function Cadastrar($usuario){
+    public function Cadastrar($usuario, $email, $senha){
         
-        return $this->_repository->Cadastrar($usuario);
+        return $this->_repository->Cadastrar($usuario, $email, $senha);
+
     }
 
-    public function Login( $usuario){
+    public function Login($email, $senha){
         
-        return $this->_repository->Login($usuario);
+        return $this->_repository->Login($email, $senha);
     }
 }
 
