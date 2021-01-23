@@ -10,6 +10,9 @@ a {
 @media screen and (min-width: 1000px){
     
 /*######### FIM DE FORMATAÇÃO DO MENU #####*/
+    #menu-button {
+        display: none;
+    }
     #campo-menu {
         width: 100%;
         height: 50px;

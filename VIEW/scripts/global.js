@@ -1,11 +1,12 @@
 //variaveis de sistema globais
 let page = 0;
+let width_menu = window.innerWidth > 900 ? 50: 90;
 var Search = {
     Open: function(){
         if($(".searsh-area").is(":hidden")){
             $(".menu").hide();
             $(".searsh-area").show();
-            $(".searsh-area").css("width", "50%");
+            $(".searsh-area").css("width", width_menu + "%");
         }else{
             $(".searsh-area").css("width", "0%");
             $(".searsh-area").hide(500);
