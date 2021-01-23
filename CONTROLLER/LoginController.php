@@ -9,14 +9,14 @@ class LoginController {
         $this->_appservice = new LoginAppService();
     }
 
-    public function Cadastrar($usuario){
+    public function Cadastrar($usuario, $email, $senha){
 
         return $this->_appservice->Cadastrar($usuario);
     }
 
-    public function Login($usuario){
+    public function Login($email, $senha){
 
-        return $this->_appservice->Login($usuario);
+        echo $this->_appservice->Login($usuario);
     }
 }
 

@@ -2,9 +2,10 @@
 
 interface ILoginAppService {
     // Métodos de interface
-    public function Cadastrar(UsuarioViewModel $usuario);
+    public function Cadastrar($usuario, $email, $senha);
 
-    public function Login(UsuarioViewModel $usuario);
+    public function Login($email, $senha);
+
 }
 
 ?>
