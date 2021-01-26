@@ -13,13 +13,13 @@ João Gabrial | [João](https://github.com/JGA06) | Desenvolviment/programação
 Lara Magalhães | [Lara](https://github.com/laraprogramaai) | Design e front end | 03
 
 
-**Andamento do projeto**
-**Data de inicio | Andamento| Praso final estipulado | Frequencia de reuniões**
+**Andamento do projeto:**
+Data de inicio | Andamento| Praso final estipulado | Frequencia de reuniões
 --- | --- | --- | ---
 20/12/2020 | 5% | 12/12/2021 | 1 semana
 
 
-**Check list do projeto**
+**Check list do projeto:**
 
 - [ ] Criar design das telas 
 - [ ] Implementar front end 
