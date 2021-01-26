@@ -14,7 +14,7 @@ Lara Magalhães | [Lara](https://github.com/laraprogramaai) | Design e front end
 
 
 **Andamento do projeto:**
-Data de inicio | Andamento| Praso final estipulado | Frequencia de reuniões
+Data de inicio | Andamento| Praso final estipulado | Frequência de reuniões
 --- | --- | --- | ---
 20/12/2020 | 5% | 12/12/2021 | 1 semana
 
