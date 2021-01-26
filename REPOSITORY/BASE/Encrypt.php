@@ -1,5 +1,5 @@
 <?php
-include "../CONFIG/Config.php";
+include "Config.php";
 
 class Encrypt {
     private $_config;

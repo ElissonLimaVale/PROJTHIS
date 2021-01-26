@@ -1,0 +1,186 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: impact Haettenschweiler, sans-serif;
+    font-size: 18px;
+}
+
+/* #########################  layout pc ###################################*/
+@media screen and (min-width: 1000px){
+
+    #cadastro{
+        width: 100%;
+        height: 100vh;
+        overflow: hidden;
+    }
+
+    #title{
+        text-align: center;
+        font-size: 50px;
+        color: #47525e;
+    }
+
+    #sub-title { 
+        text-align: center;
+        color: #8694a8;
+    }
+
+    .login-bar{
+        position: absolute;
+        width: 40%;
+        height: 400px;
+        left: calc(50% - 20%);
+        right: calc(50% - 20%);
+        top: calc(50% - 230px);
+        bottom: calc(50% - 170px);
+    }
+
+    .input-logon{
+        position: relative;
+        top: 50px;
+        width: 100%;
+        padding: 15px 25px;
+        font-size: 20px;
+        color: #47525e;
+        margin-top: 10px;
+        border: 1px solid rgba(0,0,0,.2);
+        border-radius: 5px;
+    }
+    
+    #cadastrar{
+        position: relative;
+        width: 50%;
+        top: 80px;
+        left: calc(50% - 25%);
+        padding: 15px 25px;
+        font-size: 20px;
+        background-color: #00a6ff;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+    }
+
+    #cadastrar:hover{
+        background-color: #038cd5;
+    }
+
+    #termos-condicoes{
+        text-align: center;
+        margin-top: 360px;
+        color: #8694a8;
+        bottom: 120px;
+    }
+
+    #conta-entrar{
+        text-align: center;
+        font-size: 32px;
+        color: #47525e;
+        font-weight: bold;
+    }
+
+    #entre{
+        text-decoration: none;
+        text-align: center;
+        font-size: 32px;
+        color:  #47525e;
+        font-weight: bold;
+        cursor: pointer;
+    }
+
+    @keyframes left{
+        0%{left: -200px;}
+        100%{left: 0%;}
+    }
+
+    @keyframes right{
+        0%{right: -200px;}
+        100%{right: 0%}
+    }
+    
+    #left1 {
+        position: absolute;
+        top: 100px;
+        background-color: #ff9052;
+        animation: left .5s linear;
+    }
+    #left2 {
+        position: absolute;
+        top: 180px;
+        background-color: #00a6ff;
+        animation: left .5s linear;
+    }
+    #left3 {
+        position: absolute;
+        top: 260px;
+        background-color: #13ce66;
+        animation: left .5s linear;
+    }
+    #left4 {
+        position: absolute;
+        top: 340px;
+        background-color: #ffba5c;
+        animation: left .5s linear;
+    }
+    #left5 {
+        position: absolute;
+        top: 420px;
+        background-color: #13ce66;
+        animation: left .5s linear;
+    }
+    #left6 {
+        position: absolute;
+        top: 500px;
+        background-color: #00a6ff;
+        animation: left .5s linear;
+    }
+
+
+    #right1 {
+        position: absolute;
+        top: 100px;
+        right: 0px;
+        background-color: #00a6ff;
+        animation: right .5s linear;
+    }
+    #right2 {
+        position: absolute;
+        top: 180px;
+        right: 0px;
+        background-color: #ffba5c;
+        animation: right .5s linear;
+    }
+    #right3 {
+        position: absolute;
+        top: 260px;
+        right: 0px;
+        background-color: #13ce66;
+        animation: right .5s linear;
+    }
+    #right4 {
+        position: absolute;
+        top: 340px;
+        right: 0px;
+        background-color: #ff9052;
+        animation: right .5s linear;
+    }
+    #right5 {
+        position: absolute;
+        top: 420px;
+        right: 0px;
+        background-color: #13ce66;
+        animation: right .5s linear;
+    }
+    #right6 {
+        position: absolute;
+        top: 500px;
+        right: 0px;
+        background-color: #00a6ff;
+        animation: right .5s linear;
+    }
+}
+
+/*############################# layout celular ############################## */
+@media screen and (max-width: 1000px){
+
+
+}
