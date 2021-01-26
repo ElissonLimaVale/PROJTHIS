@@ -7,6 +7,7 @@ var Search = {
             $(".menu").hide();
             $(".searsh-area").show();
             $(".searsh-area").css("width", width_menu + "%");
+            $("#search").focus();
         }else{
             $(".searsh-area").css("width", "0%");
             $(".searsh-area").hide(500);
@@ -67,7 +68,7 @@ setInterval(function(){
 },3000);
 
 // Usuario com sono
-setInterval(function(){
+setInterval(() => {
     $("#icon-user").css("background", "url('imagens/user-sono.png')");
     $("#icon-user").css("background-position", "50%");
     $("#icon-user").css("background-size", "110%");
