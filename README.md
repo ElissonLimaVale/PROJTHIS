@@ -6,7 +6,7 @@ O site tambem terá uma comunidade publica para todos comversarem sobre assuntos
 
 **Desenvolvedores e colaboradores do projeto:**
 
-**Nome | Perfil Github| Responsabilidades e atividades | hierarquia**
+Nome | Perfil Github| Responsabilidades e atividades | Hierarquia
 --- | --- | --- | ---
 Elisson | [Elisson Vale](https://github.com/ElissonLimaVale) | Idealização, gestão e programação | 01
 João Gabrial | [João](https://github.com/JGA06) | Desenvolviment/programação | 02
@@ -17,3 +17,16 @@ Lara Magalhães | [Lara](https://github.com/laraprogramaai) | Design e front end
 **Data de inicio | Andamento| Praso final estipulado | Frequencia de reuniões**
 --- | --- | --- | ---
 20/12/2020 | 5% | 12/12/2021 | 1 semana
+
+
+**Check list do projeto**
+
+- [ ] Criar design das telas 
+- [ ] Implementar front end 
+- [ ] Disponibilisar front end com dominio para teste de interface de usuario
+- [ ] Implementação de back end com tratamento dos dados e algoritimo de geração de hash de dados sensiveis
+- [ ] Testes de Implementação e funcionalidades PHP
+- [ ] Implementação procedures Mysql para querys com lógica "de regra de negócio"
+- [ ] Fazer ultimos testes e adicionar melhorias de código e pattern
+- [ ] Publicar versão MVP para teste de aprovação de usuários
+- [ ] Gerenciar alterações futuras, adição de novas funcionalidades e mudanças em interface de usuario
