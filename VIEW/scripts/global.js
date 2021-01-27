@@ -1,20 +1,30 @@
-//variaveis de sistema globais
+// VARIAVEIS GLOBAIS DE SISTEMAS
 let page = 0;
 let width_menu = window.innerWidth > 900 ? 50: 90;
+
+//#region  OBJETO DE CAMPO DE PESQUISA
 var Search = {
-    Open: function(){
+    Open: () => {
+        $("#campo-menu").append("<div class='searsh-area' method='post' action='index.php' hidden='true'>" 
+        + "<button class='searsh-button-hide'></button> "
+        + "<input id='search' name='pesquisar' placeholder='Pesquisar..'/>"
+        + "<button type='submit' class='searsh-button'></button>"
+        + "</div>");
+        
         if($(".searsh-area").is(":hidden")){
             $(".menu").hide();
-            $(".searsh-area").show();
-            $(".searsh-area").css("width", width_menu + "%");
-            $("#search").focus();
+            $(".searsh-area").show(100);
+            setTimeout(() => {
+                $(".searsh-area").css("width", width_menu + "%");
+                $("#search").focus();
+            }, 100);
         }else{
             $(".searsh-area").css("width", "0%");
             $(".searsh-area").hide(500);
             $(".menu").show(500);
         }
     },
-    Close: function(){
+    Close: () => {
         $(".searsh-button-hide").css("transform", "rotate(360deg)");
         $(".searsh-area").css("width", "0%");
         setTimeout(() => {
@@ -24,6 +34,8 @@ var Search = {
         }, 400);
     }
 };
+//#endregion
+
 //#region ADIÇÃO DA LOGO ICONE
 logotipo = window.location.href;
 if(logotipo.substring(window.location.href.length - 3, window.location.href.length) == "php"){
@@ -47,11 +59,11 @@ document.onscroll = () => {
     }
 };
 
-$("#lupa").on("click", () => {
+$("#lupa").click(() => {
     Search.Open();
 });
 
-$(".searsh-button-hide").on("click", () => {
+$(".searsh-button-hide").click(() => {
     Search.Close();
 });
 
@@ -122,15 +134,15 @@ function search(){
     });
     Search.Close();
 }
+
+//#endregion
+
+//#region LOAD NOTIFICATION
 function loadShow(){
-    $("#load-area").show();
+    $(document.body).append("<div id='load-area'></div>");
+    $("#load-area").append("<div id='load-loop'></div>");
 }
 function loadHide(){
-    $("#load-area").hide();
-}
-function init(){
-    $(".searsh-area").hide();
-    $("#search-result-area").hide();
     $("#load-area").hide();
 }
 //#endregion

@@ -22,10 +22,7 @@ include "../CONTROLLER/LoginController.php";
     <!--link rel="preload" as="script" href="scripts/global.js"/ -->
    
 </head>
-<body onload="init();">
-    <div id="load-area">
-        <div id="load-loop"></div>
-    </div>
+<body>
     <nav id="campo-menu" class="nav-top">
         <div>
             <div id="menu-button"></div>
@@ -41,11 +38,6 @@ include "../CONTROLLER/LoginController.php";
             <li id="conta" class="item-menu">Conta</li>
             <li id="icon-user" style="padding: 0px;"></li>
         </ul>
-        <div class="searsh-area" method="post" action="index.php">
-            <button class="searsh-button-hide"></button>
-            <input id="search" name="pesquisar" placeholder="Pesquisar.."/>
-            <button type="submit" class="searsh-button"></button>
-        </div>
     </nav>
     <div id="template">
         <div class="div2">
@@ -62,7 +54,9 @@ include "../CONTROLLER/LoginController.php";
         </div>
     </div>
 
-    <div id='search-result-area'>
+    
+    <!-- AREA DE RESULTADO DE UMA PESQUISA -->
+    <div id='search-result-area' hidden='true'>
         <div id='result-search'>
             <label id='titulo-search-area'>Resultados: <i id='close-result-search'></i></label>
             <?php 
