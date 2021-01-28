@@ -5,12 +5,12 @@ let width_menu = window.innerWidth > 900 ? 50: 90;
 //#region  OBJETO DE CAMPO DE PESQUISA
 var Search = {
     Open: () => {
-        $("#campo-menu").append("<div class='searsh-area' method='post' action='index.php' hidden='true'>" 
-        + "<button class='searsh-button-hide'></button> "
-        + "<input id='search' name='pesquisar' placeholder='Pesquisar..'/>"
-        + "<button type='submit' class='searsh-button'></button>"
-        + "</div>");
-        
+        $("#campo-menu").append(" <div class='searsh-area' method='post' action='index.php' hidden='true'> " 
+        + " <button class='searsh-button-hide'></button> "
+        + " <input id='search' name='pesquisar' placeholder='Pesquisar..'/> "
+        + " <button type='submit' class='searsh-button'></button> "
+        + " </div>");
+
         if($(".searsh-area").is(":hidden")){
             $(".menu").hide();
             $(".searsh-area").show(100);
