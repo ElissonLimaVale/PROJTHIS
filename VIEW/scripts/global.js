@@ -2,13 +2,20 @@
 let page = 0;
 let width_menu = window.innerWidth > 900 ? 50: 90;
 
+//#region CONFIGURAÇÕES GENÉRICAS DE ELEMENTOS DE TELA
+$(".projthis-input-password").append("<i></i>"
+    +"<input type='password' class='projthis-input' placeholder='Senha'/>"
+);
+//#endregion
+
+
 //#region  OBJETO DE CAMPO DE PESQUISA
 var Search = {
     Open: () => {
         $("#campo-menu").append(" <div class='searsh-area' method='post' action='index.php' hidden='true'> " 
-        + " <button class='searsh-button-hide'></button> "
+        + " <button class='searsh-button-hide' onclick='Search.Close();'></button> "
         + " <input id='search' name='pesquisar' placeholder='Pesquisar..'/> "
-        + " <button type='submit' class='searsh-button'></button> "
+        + " <button type='submit' class='searsh-button' onclick='search();'></button> "
         + " </div>");
 
         if($(".searsh-area").is(":hidden")){
@@ -32,6 +39,10 @@ var Search = {
             $(".menu").show(200);
             $(".searsh-button-hide").css("transform", "rotate(0deg)");
         }, 400);
+    },
+    CloseArea: () => {
+        $("#search-result-area").hide(0);
+        $("#template").show(0);
     }
 };
 //#endregion
@@ -101,14 +112,11 @@ $("#icon-user").on("mouseover", () => {
         
 
 //#region SEARCH ACTION
-$(".searsh-button").on("click", () => {
-    search();
-});
-$("#close-result-search").on("click", () => {
-    $("#search-result-area").hide(0);
-    $("#template").show(0);
-});
-document.addEventListener("keypress", function(event) {
+// $(".searsh-button").on("click", () => {
+//     search();
+// });
+
+document.addEventListener("keypress", (event) => {
     if(event.key.toUpperCase() == "ENTER" && $("#search").val() != "" && !document.getElementById("search").hidden){
         search();
     }
@@ -146,3 +154,6 @@ function loadHide(){
     $("#load-area").hide();
 }
 //#endregion
+
+
+

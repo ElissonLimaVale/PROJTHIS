@@ -58,7 +58,7 @@ include "../CONTROLLER/LoginController.php";
     <!-- AREA DE RESULTADO DE UMA PESQUISA -->
     <div id='search-result-area' hidden='true'>
         <div id='result-search'>
-            <label id='titulo-search-area'>Resultados: <i id='close-result-search'></i></label>
+            <label id='titulo-search-area'>Resultados: <i id='close-result-search' onclick='Search.CloseArea();'></i></label>
             <?php 
             $caminho = array("imagens/voo.png", 
             "imagens/teste.jpg",
@@ -106,13 +106,15 @@ include "../CONTROLLER/LoginController.php";
         </div>
     </div>
     
-     <!--- bibliotecas - frameworks - recursos --->
-     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <!--- bibliotecas - frameworks - recursos --->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     
     <!-- Scripts do do site-->
     <script src="scripts/global.js"></script>
     <script src="scripts/globalmobile.js"></script>
+    <link rel="stylesheet" type="text/css" href="estilo/inicio.css"/>
+    <script src="scripts/inicio.js"></script>
 </body>
 </html>
