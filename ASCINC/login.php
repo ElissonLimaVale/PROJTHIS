@@ -24,7 +24,8 @@
             $senha = $_POST["senha"];
 
             $response =  $this->_controller->Cadastrar($usuario, $email, $senha);
-            echo $response;
+            header('Content-Type: application/json');
+            echo json_encode($response);
         }
 
         

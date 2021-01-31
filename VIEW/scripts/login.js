@@ -1,3 +1,5 @@
+let teste;
+
 //#region  ESCOLHA DE TELA LOGIN
 $(document).ready(() => {
 
@@ -102,7 +104,8 @@ $("#cadastrar").on("click", () => {
                 senha: senha
             }
         }).done((data) => {
-            alert(data);
+            alert(data["mensagem"]);
+            teste = data;
         }).fail(() => {
             alert("Ops, ocorreu uma falha na requisição");
         });

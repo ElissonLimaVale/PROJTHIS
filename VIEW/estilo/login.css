@@ -198,5 +198,7 @@
 /*############################# layout celular ############################## */
 @media screen and (max-width: 1000px){
 
-
+    .colunas {
+        display: none;
+    }
 }
