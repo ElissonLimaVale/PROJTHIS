@@ -130,23 +130,25 @@ CREATE TABLE `totais` (
 
 CREATE TABLE `usuario` (
   `id` int(11) NOT NULL,
-  `nome` varchar(30) NOT NULL,
+  `nome` varchar(100) NOT NULL,
+  `status` enum('Online', 'Ocupado', 'Ausente', 'Offline') NOT NULL DEFAULT 'Online',
   `cpf` varchar(11) NOT NULL,
-  `senha` varchar(40) NOT NULL,
-  `email` varchar(40) NOT NULL,
-  `telefone` varchar(11) NOT NULL,
-  `github` varchar(40) NOT NULL,
+  `senha` varchar(100) NOT NULL,
+  `email` varchar(100) NOT NULL,
+  `telefone` varchar(20) NOT NULL,
+  `github` varchar(100) NOT NULL,
   `ultimo_saque` double NOT NULL,
+  `ultimo_login` datetime,
   `sexo` enum('Masculino','Feminino','Nao Informado') NOT NULL DEFAULT 'Nao Informado'
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `vizualisacoes`
+-- Estrutura da tabela `visualiazacoes`
 --
 
-CREATE TABLE `vizualisacoes` (
+CREATE TABLE `visualiazacoes` (
   `proj_id` int(11) NOT NULL,
   `quantidade` int(11) DEFAULT NULL,
   `user_id` int(11) DEFAULT NULL,
@@ -222,9 +224,9 @@ ALTER TABLE `usuario`
   ADD PRIMARY KEY (`id`);
 
 --
--- Índices para tabela `vizualisacoes`
+-- Índices para tabela `visualizacoes`
 --
-ALTER TABLE `vizualisacoes`
+ALTER TABLE `visualizacoes`
   ADD KEY `proj_id` (`proj_id`),
   ADD KEY `user_id` (`user_id`);
 
