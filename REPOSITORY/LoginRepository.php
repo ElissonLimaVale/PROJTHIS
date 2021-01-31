@@ -1,7 +1,7 @@
 <?php
 
 include "BASE/conexao.php";
-include "BASE/Encypt.php";
+include "BASE/Encrypt.php";
 
 class LoginRepository implements ILoginRepository {
     private $_conexao;
@@ -14,17 +14,18 @@ class LoginRepository implements ILoginRepository {
 
     public function Cadastrar($usuario, $email, $senha){
         // Emplementar função de cadastro 
-        $response = new Response(true, "Cadastrado com sucesso!");
        
-         $hash = $this->_encrypt->GetHash($senha);
-        try {
-            $conexao = $this->_conexao->conectar();
-            $query = "execute Cadastrar " .$usuario." ".$email." ".$hash;
-            $result = mysqli_query($conexao, $query);
-        }catch(Exception $s) {
-            $response->data = false;
-            $respnse->message = "Ops, ocorreu um erro: " .$s;
-        }
+        $hash = $this->_encrypt->GetHash($senha);
+
+        $response = "Cadastrado com sucesso! usuario = ".$usuario. " Email = ". $email. " Senha = " .$hash;
+        // try {
+        //     $conexao = $this->_conexao->conectar();
+        //     $query = "CALL Cadastrar(" .$usuario." ".$email." ".$hash.")";
+        //     $result = mysqli_query($conexao, $query);
+        // }catch(Exception $s) {
+        //     $response->data = false;
+        //     $respnse->message = "Ops, ocorreu um erro: " .$s;
+        // }
 
         return $response;
 
@@ -36,15 +37,15 @@ class LoginRepository implements ILoginRepository {
     }
 }
 
-class Response {
-    public $data;
-    public $message;
+// class Response {
+//     public $data;
+//     public $message;
 
-    public function __construct($_data, $_message){
-        $this->data = $_data;
-        $this->message  = $_message;
-    }
+//     public function __construct($_data, $_message){
+//         $this->data = $_data;
+//         $this->message  = $_message;
+//     }
 
-}
+// }
 
 ?>
