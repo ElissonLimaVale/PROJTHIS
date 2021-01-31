@@ -39,7 +39,7 @@ include "../CONTROLLER/LoginController.php";
     
         <h3 id="conta-entrar">Já tem uma conta? <a id="entre">Entre</a></h3>
 
-        
+    
         <div id="left1" class="colunas"></div>
         <div id="left2" class="colunas"></div>
         <div id="left3" class="colunas"></div>
@@ -53,6 +53,7 @@ include "../CONTROLLER/LoginController.php";
         <div id="right4" class="colunas"></div>
         <div id="right5" class="colunas"></div>
         <div id="right6" class="colunas"></div>
+
     </div>
 
     <div id="login">

@@ -22,10 +22,7 @@ include "../CONTROLLER/LoginController.php";
     <!--link rel="preload" as="script" href="scripts/global.js"/ -->
    
 </head>
-<body onload="init();">
-    <div id="load-area">
-        <div id="load-loop"></div>
-    </div>
+<body>
     <nav id="campo-menu" class="nav-top">
         <div>
             <div id="menu-button"></div>
@@ -41,11 +38,6 @@ include "../CONTROLLER/LoginController.php";
             <li id="conta" class="item-menu">Conta</li>
             <li id="icon-user" style="padding: 0px;"></li>
         </ul>
-        <div class="searsh-area" method="post" action="index.php">
-            <button class="searsh-button-hide"></button>
-            <input id="search" name="pesquisar" placeholder="Pesquisar.."/>
-            <button type="submit" class="searsh-button"></button>
-        </div>
     </nav>
     <div id="template">
         <div class="div2">
@@ -62,9 +54,11 @@ include "../CONTROLLER/LoginController.php";
         </div>
     </div>
 
-    <div id='search-result-area'>
+    
+    <!-- AREA DE RESULTADO DE UMA PESQUISA -->
+    <div id='search-result-area' hidden='true'>
         <div id='result-search'>
-            <label id='titulo-search-area'>Resultados: <i id='close-result-search'></i></label>
+            <label id='titulo-search-area'>Resultados: <i id='close-result-search' onclick='Search.CloseArea();'></i></label>
             <?php 
             $caminho = array("imagens/voo.png", 
             "imagens/teste.jpg",
@@ -112,13 +106,15 @@ include "../CONTROLLER/LoginController.php";
         </div>
     </div>
     
-     <!--- bibliotecas - frameworks - recursos --->
-     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <!--- bibliotecas - frameworks - recursos --->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     
     <!-- Scripts do do site-->
     <script src="scripts/global.js"></script>
     <script src="scripts/globalmobile.js"></script>
+    <link rel="stylesheet" type="text/css" href="estilo/inicio.css"/>
+    <script src="scripts/inicio.js"></script>
 </body>
 </html>

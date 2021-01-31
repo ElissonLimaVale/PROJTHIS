@@ -1,20 +1,37 @@
-//variaveis de sistema globais
+// VARIAVEIS GLOBAIS DE SISTEMAS
 let page = 0;
 let width_menu = window.innerWidth > 900 ? 50: 90;
+
+//#region CONFIGURAÇÕES GENÉRICAS DE ELEMENTOS DE TELA
+$(".projthis-input-password").append("<i></i>"
+    +"<input type='password' class='projthis-input' placeholder='Senha'/>"
+);
+//#endregion
+
+
+//#region  OBJETO DE CAMPO DE PESQUISA
 var Search = {
-    Open: function(){
+    Open: () => {
+        $("#campo-menu").append(" <div class='searsh-area' method='post' action='index.php' hidden='true'> " 
+        + " <button class='searsh-button-hide' onclick='Search.Close();'></button> "
+        + " <input id='search' name='pesquisar' placeholder='Pesquisar..'/> "
+        + " <button type='submit' class='searsh-button' onclick='search();'></button> "
+        + " </div>");
+
         if($(".searsh-area").is(":hidden")){
             $(".menu").hide();
-            $(".searsh-area").show();
-            $(".searsh-area").css("width", width_menu + "%");
-            $("#search").focus();
+            $(".searsh-area").show(100);
+            setTimeout(() => {
+                $(".searsh-area").css("width", width_menu + "%");
+                $("#search").focus();
+            }, 100);
         }else{
             $(".searsh-area").css("width", "0%");
             $(".searsh-area").hide(500);
             $(".menu").show(500);
         }
     },
-    Close: function(){
+    Close: () => {
         $(".searsh-button-hide").css("transform", "rotate(360deg)");
         $(".searsh-area").css("width", "0%");
         setTimeout(() => {
@@ -22,8 +39,14 @@ var Search = {
             $(".menu").show(200);
             $(".searsh-button-hide").css("transform", "rotate(0deg)");
         }, 400);
+    },
+    CloseArea: () => {
+        $("#search-result-area").hide(0);
+        $("#template").show(0);
     }
 };
+//#endregion
+
 //#region ADIÇÃO DA LOGO ICONE
 logotipo = window.location.href;
 if(logotipo.substring(window.location.href.length - 3, window.location.href.length) == "php"){
@@ -47,11 +70,11 @@ document.onscroll = () => {
     }
 };
 
-$("#lupa").on("click", () => {
+$("#lupa").click(() => {
     Search.Open();
 });
 
-$(".searsh-button-hide").on("click", () => {
+$(".searsh-button-hide").click(() => {
     Search.Close();
 });
 
@@ -89,14 +112,11 @@ $("#icon-user").on("mouseover", () => {
         
 
 //#region SEARCH ACTION
-$(".searsh-button").on("click", () => {
-    search();
-});
-$("#close-result-search").on("click", () => {
-    $("#search-result-area").hide(0);
-    $("#template").show(0);
-});
-document.addEventListener("keypress", function(event) {
+// $(".searsh-button").on("click", () => {
+//     search();
+// });
+
+document.addEventListener("keypress", (event) => {
     if(event.key.toUpperCase() == "ENTER" && $("#search").val() != "" && !document.getElementById("search").hidden){
         search();
     }
@@ -122,15 +142,18 @@ function search(){
     });
     Search.Close();
 }
+
+//#endregion
+
+//#region LOAD NOTIFICATION
 function loadShow(){
-    $("#load-area").show();
+    $(document.body).append("<div id='load-area'></div>");
+    $("#load-area").append("<div id='load-loop'></div>");
 }
 function loadHide(){
     $("#load-area").hide();
 }
-function init(){
-    $(".searsh-area").hide();
-    $("#search-result-area").hide();
-    $("#load-area").hide();
-}
 //#endregion
+
+
+
