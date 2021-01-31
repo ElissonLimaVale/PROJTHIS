@@ -17,6 +17,8 @@ include "../CONTROLLER/LoginController.php";
 <body onload="init();">
     
     <div id="cadastro">
+        
+        <div id = "logo"></div> 
 
         <h2 id="title">Crie sua conta!</h2>
 
@@ -37,20 +39,21 @@ include "../CONTROLLER/LoginController.php";
     
         <h3 id="conta-entrar">Já tem uma conta? <a id="entre">Entre</a></h3>
 
-        
-        <div id="left1"></div>
-        <div id="left2"></div>
-        <div id="left3"></div>
-        <div id="left4"></div>
-        <div id="left5"></div>
-        <div id="left6"></div>
+    
+        <div id="left1" class="colunas"></div>
+        <div id="left2" class="colunas"></div>
+        <div id="left3" class="colunas"></div>
+        <div id="left4" class="colunas"></div>
+        <div id="left5" class="colunas"></div>
+        <div id="left6" class="colunas"></div>
 
-        <div id="right1"></div>
-        <div id="right2"></div>
-        <div id="right3"></div>
-        <div id="right4"></div>
-        <div id="right5"></div>
-        <div id="right6"></div>
+        <div id="right1" class="colunas"></div>
+        <div id="right2" class="colunas"></div>
+        <div id="right3" class="colunas"></div>
+        <div id="right4" class="colunas"></div>
+        <div id="right5" class="colunas"></div>
+        <div id="right6" class="colunas"></div>
+
     </div>
 
     <div id="login">

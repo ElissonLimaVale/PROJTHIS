@@ -57,6 +57,31 @@ $("#entre").on("click", () => {
 //#region CADASTRO 
 //Formatação e animação da tela
 $(document).ready(() => {
+<<<<<<< HEAD
+    let wid = [190, 220, 245, 185, 210, 180];
+
+    //Formatação de divs da direita
+    for(let i = 1; i <= wid.length; i++){
+        // width = Math.floor(max_width * Math.random());
+        // height = Math.floor(max_height * Math.random());
+
+        // width = width < 140 ? 140: width;
+        // heigth = height < 70 ? 70: height;
+
+        $("#right" + i).css("width", wid[i] + "px");
+        // $("#right" + i).css("height", height + "px");        
+    }
+    //Formatação de divs da esquerda
+    for(let i = 1; i <= wid.length; i++){
+        // width = Math.floor(max_width * Math.random());
+        // height = Math.floor(max_height * Math.random());
+
+        // width = width < 140 ? 140: width;
+        // heigth = height < 70 ? 70: height;
+
+        $("#left" + i).css("width", wid[i] + "px");
+        // $("#left" + i).css("height", height + "px");
+=======
     let width = 0;
     let height = 0;
     let max_width = 200;
@@ -82,6 +107,7 @@ $(document).ready(() => {
 
         $("#left" + i).css("width", width + "px");
         $("#left" + i).css("height", height + "px");
+>>>>>>> b3daf925404ee1edc5147ce2327d169c68c90d4b
     }
 });
 
