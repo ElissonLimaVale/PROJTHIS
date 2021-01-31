@@ -8,7 +8,7 @@ class LoginAppService implements ILoginAppService {
     private $_mapper;
     public function __construct() {
         $this->_repository = new LoginRepository();
-        $this->_mapper = new AutoMaper();
+        // $this->_mapper = new AutoMaper();
     }
 
     public function Cadastrar($usuario, $email, $senha){
