@@ -14,18 +14,27 @@ class LoginRepository implements ILoginRepository {
 
     public function Cadastrar($usuario, $email, $senha){
         // Emplementar função de cadastro 
-       
+        $response = array('data' => true, 'mensagem' => 'Cadastrado com sucesso!');
         $hash = $this->_encrypt->GetHash($senha);
 
-        $response = "Cadastrado com sucesso! usuario = ".$usuario. " Email = ". $email. " Senha = " .$hash;
-        // try {
-        //     $conexao = $this->_conexao->conectar();
-        //     $query = "CALL Cadastrar(" .$usuario." ".$email." ".$hash.")";
-        //     $result = mysqli_query($conexao, $query);
-        // }catch(Exception $s) {
-        //     $response->data = false;
-        //     $respnse->message = "Ops, ocorreu um erro: " .$s;
-        // }
+        // $response = "Cadastrado com sucesso! usuario = ".$usuario. " Email = ". $email. " Senha = " .$hash;
+        try {
+             $conexao = $this->_conexao->conectar();
+             $query = "Select * From usuario WHERE email = '{$email}'";
+             $result = $conexao->query($query);
+             $valida = mysqli_num_rows($result);
+             if($valida == 0 || empty($valida)){
+                $sql = "Insert into usuario(nome, email, senha) values ('{$usuario}', '{$email}', '{$hash}')";
+                $cad = $conexao->query($sql);
+             }else{
+                $response['data'] = false;
+                $response['mensagem'] = "Ops, já existe um usuário cadastrado com esse e-mail! ";
+                return $response;
+             }
+        }catch(Exception $s) {
+             $response['data'] = false;
+             $response['mensagem'] = "Ops, ocorreu um erro: " .$s;
+        }
 
         return $response;
 

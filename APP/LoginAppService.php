@@ -2,6 +2,7 @@
 
 include "../REPOSITORY/INTERFACE/ILoginRepository.php";
 include "../REPOSITORY/LoginRepository.php";
+include "../DOMAIN/global.php";
 
 class LoginAppService implements ILoginAppService {
     private $_repository;
@@ -13,7 +14,7 @@ class LoginAppService implements ILoginAppService {
 
     public function Cadastrar($usuario, $email, $senha){
         
-        return $this->_repository->Cadastrar($usuario, $email, $senha);
+        return $this->_repository->Cadastrar(anteInject($usuario), anteInject($email), $senha);
 
     }
 
