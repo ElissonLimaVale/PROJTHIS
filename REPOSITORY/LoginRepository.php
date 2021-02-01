@@ -20,18 +20,28 @@ class LoginRepository implements ILoginRepository {
         // $response = "Cadastrado com sucesso! usuario = ".$usuario. " Email = ". $email. " Senha = " .$hash;
         try {
              $conexao = $this->_conexao->conectar();
+             //Valida se a conexão é nula 
+             if($conexao == null){
+                $response['data'] = false;
+                $response['mensagem'] = "Ops, Ocorreu um erro na conexão com o banco de dados! ";
+                return $response;
+             }
+             //Verifica se ja existe usuario cadastrado
              $query = "Select * From usuario WHERE email = '{$email}'";
              $result = $conexao->query($query);
              $valida = mysqli_num_rows($result);
              if($valida == 0 || empty($valida)){
+                 // Cadastra o usuario
                 $sql = "Insert into usuario(nome, email, senha) values ('{$usuario}', '{$email}', '{$hash}')";
                 $cad = $conexao->query($sql);
              }else{
+                //retorna mensagem de erro caso o usuario ja esteja cadastrado
                 $response['data'] = false;
                 $response['mensagem'] = "Ops, já existe um usuário cadastrado com esse e-mail! ";
                 return $response;
              }
         }catch(Exception $s) {
+            //trata uma exeção
              $response['data'] = false;
              $response['mensagem'] = "Ops, ocorreu um erro: " .$s;
         }
