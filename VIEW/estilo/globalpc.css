@@ -1,0 +1,552 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: impact Haettenschweiler, sans-serif;
+    font-size: 18px;
+}
+a {
+    display: none;
+}
+@media screen and (min-width: 1000px){
+    
+/*######### FIM DE FORMATAÇÃO DO MENU #####*/
+    #menu-button {
+        display: none;
+    }
+    #campo-menu {
+        width: 100%;
+        height: 50px;
+        position: fixed;
+        top: 0px;
+        background-color: rgba(255, 255, 255, 0.89);
+        transition: 1s;
+        box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.239);
+    }
+    #logo {
+        float: left;
+        height: 80px;
+        width: 150px;
+        background: url('../imagens/logo01.png') no-repeat;
+        background-position: 100%;
+        background-size: 100%;
+        margin-left: 10px;
+        margin-top: 10px;
+        cursor: pointer;
+    }
+    .menu {
+        float: right;
+        list-style: none;
+        margin-right: 4%;
+    }
+    .menu li {
+        padding: 12px 20px;
+        margin: 0px;
+        font-size: 17.5px;
+        float: left;
+        color:#002b42;
+        transition: .4s;
+        cursor: pointer;
+    }
+    .menu .item-menu:hover {
+        background-color: #1f9fe4;
+        color: rgba(255, 255, 255, 0.966);
+    }
+    #lupa {
+        width: 48px;
+        height: 48px;
+        margin: 2px;
+        background: url('../imagens/lupa3.png') no-repeat;
+        background-position: 50%;
+        background-size: 60%;
+        cursor: pointer;
+        transition: .1s;
+    }
+    #lupa:hover {
+        background-size: 65%;
+    }
+/* ############################## campo de perquisa ###########################*/
+    .searsh-area{
+        width: 0px;
+        height: 40px;
+        border: none;
+        outline: none;
+        box-shadow: none;
+        border-radius: 12px;
+        background-color: rgba(255, 255, 255, 0.918);
+        position: absolute;
+        top: 5px;
+        right: 20px;
+        transition: .8s;
+    }
+    #search {
+        width: 100%;
+        height: 40px;
+        border: none;
+        outline: none;
+        box-shadow: none;
+        border-radius: 12px;
+        color: #818181;
+        padding: 0px 65px;
+        font-size: 18px;
+        transition: 1s;
+    }
+    .searsh-button {
+        width: 45px;
+        height: 38px;
+        margin: 1px;
+        background: url('../imagens/searsh-seta.png') no-repeat;
+        background-position: 50%;
+        background-size: 40%;
+        position: absolute;
+        right: 0px;
+        top:0px;
+        cursor: pointer;
+        outline: none;
+        box-shadow: none;
+        border: none;
+        transition: .1s;
+        border-left: 1px solid rgba(110, 110, 110, 0.685);
+    }
+    .searsh-button-hide {
+        width: 45px;
+        height: 38px;
+        margin: 1px;
+        background: url('../imagens/Cansel_seash.png') no-repeat;
+        background-position: 50%;
+        background-size: 50%;
+        position: absolute;
+        left: 0px;
+        top:0px;
+        cursor: pointer;
+        outline: none;
+        box-shadow: none;
+        border: none;
+        transition: 1s;
+        border-right: 1px solid rgba(110, 110, 110, 0.685);
+    }
+
+/*########################### fim do campo de pesquisa #########################*/
+
+    #icon-user {
+        width: 42px;
+        height: 42px;
+        margin: 4px 5px;
+        border: 0px solid #004970;
+        border-radius: 50%;
+        background: url('../imagens/user-bed.png') no-repeat;
+        background-position: 50%;
+        background-size: 110%;
+        cursor: pointer;
+        transition: .1s;
+    }
+    #icon-user:hover {
+        background: url('../imagens/user-heppy.png') no-repeat;
+        background-position: 50%;
+        background-size: 110%;
+    }
+/*######### FIM DE FORMATAÇÃO DO MENU #####*/
+
+/*######### AQUI TODA AS ANIMAÇÕES DE TEMPLATE DA TELA INICIAL #####*/
+
+    #template{
+        width: 100%;
+        height: 650px;
+        background-image: 
+        linear-gradient(
+            to top,
+            #64bff0,
+            #1f9fe4
+        );
+    }
+    .div2 {
+        height: 550px;
+        width: calc(50%);
+        float: left;
+    }
+
+    .titulo-div{
+        /* border: 2px solid #004970; */
+        width: 45%;
+        height: 340px;
+        padding: 15px;
+        margin-top: 0px;
+        margin-left: 24%;
+        transition: .8s;
+        animation: animation-div 1.5s linear;
+    }
+    .titulo-logo {
+        font-size: 5.5vw;
+        font-weight: 900;
+        font-family: 'Segoe print';
+        text-align: center;
+        color: #fff;
+        background-color: #ffad3d;
+        padding: 10px 20px;
+        margin-top: 75px;
+        margin-left: 60px;
+        width: 60%;
+        transition: .3s;
+        animation: animation-logo .8s linear;
+    }
+    @keyframes animation-logo {
+        0%{margin-left: -600px}
+        100%{margin-left: 75px}
+    }
+    @keyframes animation-div {
+        0%{margin-left: -600px}
+        100%{margin-left: 24%}
+    }
+    .titulo {
+        font-size: 5vw;
+        font-weight: 900;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        color: #004970;
+    }
+
+    #pandora {
+        margin: 0px 30px;
+        transition: 3s;
+        animation: animation01 30s infinite;
+    }
+    @keyframes animation01 {
+        0%{margin-left: 30px}
+        50%{margin-left: 50%}
+        100%{margin-left: 80%}
+    }
+
+    #teste {
+        background-color: rgb(255, 255, 255);
+        width: 100%;
+        height: 2140px;
+        background: url('../imagens/HOME.png');
+        background-position: 100%;
+        background-size: 100%;
+        margin: 0px;
+    }
+
+/*######### FIM AS ANIMAÇÕES DE TEMPLATE DA TELA INICIAL #####*/
+
+    #animation-person {
+        width: 250px;
+        height: 250px;
+        background: url('../imagens/animacao01.gif') no-repeat;
+        background-position: 100%;
+        background-size: 100%;
+        display: none;
+    }
+
+/*############### AREA DE RESULTADO DE PESQUISAS ##############*/
+    #result-search {
+        width: 100%;
+        height: 100vh;
+        overflow: auto;
+        background-color: #1f9fe4;
+        padding-bottom: 40px;
+    }
+    #titulo-search-area {
+        color:#004970;
+        font-size: 32px;
+        width: 100%;
+        padding: 80px 30px 0px 30px;
+    }
+    #close-result-search {
+        float: right;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        border: 2px solid rgba(110, 110, 110, 0.685);
+        background: url('../imagens/Cansel_seash.png') no-repeat;
+        background-size: 100%;
+        background-position: 50%;
+        cursor: pointer;
+    }
+    #close-result-search:hover {
+        background-size: 95%;
+    }
+    .item-result {
+        width: 28%;
+        height: auto;
+        border-radius: 10px;
+        margin: 20px calc(8% / 3);
+        background-image: linear-gradient(
+            to top,
+            rgba(73, 73, 73, 0.397),
+            rgba(73, 73, 73, 0.856)
+        );
+        float: left;
+    }
+    .item-result:hover .buttom-item-result{
+        opacity: 1;
+        margin-top: calc(50% - 30px);
+    }
+    .item-result:hover .sub-search-result-div-item {
+        background-color: rgba(0, 0, 0, 0.651);
+    }
+    .icone-play {
+        width: 100%;
+        height: 60%;
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+    }
+    .sub-search-result-div-item {
+        width: 100%;
+        height: 100%;
+        /* background-color: rgba(243, 144, 30, 0.493); */
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+        transition: .5s;
+    }
+    /* .sub-search-result-div-item:hover {
+        background-color: rgba(0, 0, 0, 0.651);
+    } */
+    /* .sub-search-result-div-item:hover .buttom-item-result{
+        opacity: 1;
+        margin-top: calc(50% - 30px);
+    } */
+    .buttom-item-result{
+        padding: 10px 20px;
+        border-radius: 10px;
+        background-color: rgba(255, 157, 45, 0.931);
+        color: rgb(255, 255, 255);
+        font-size: 20px;
+        margin: calc(50% - 0px) calc(50% - 55px);
+        opacity: 0;
+        cursor: pointer;
+        transition: .5s;
+    }
+    .nome-play {
+        width: 100%;
+        font-size: 25px;
+        color: rgb(255, 255, 255);
+        padding: 10px 15px;
+    }
+    .descricao-play {
+        font-size: 16px;
+        font-weight: lighter;
+        color: rgb(194, 194, 194);
+        padding: 10px;
+        width: 100%;
+        text-overflow: ellipsis;
+        overflow: hidden;
+    }
+    #bottom-header {
+        width: 50%;
+        height: 10vh;
+        border-top-left-radius: 20px;
+        background-color: rgba(0, 0, 0, 0.89);
+        margin: 0px;
+        position: fixed;
+        float: right;
+        right: 0px;
+        bottom: 0px;
+    }
+    #number-pages {
+        list-style: none;
+        margin: 5px 20px;
+        float: right;
+    }
+    #number-pages li {
+        margin: 0px 10px;
+        font-size: 20px;
+        padding: 5px 15px;
+        text-align: center;
+        color: rgb(255, 255, 255);
+        border-radius: 50%;
+        float: left;
+        cursor: pointer;
+    }
+    #number-pages li:hover {
+        color:#ffad3d;
+    }
+    .enumerable-final{
+        margin: 0px 10px;
+        font-size: 20px;
+        padding: 5px 15px;
+        color: rgb(255, 255, 255);
+        border-radius: 50%;
+        cursor: pointer;
+    }
+/*############################  LOAD  ###############################*/
+    #load-area {
+        width: 100%;
+        height: 100vh;
+        position: absolute;
+        top: 0px;
+        background-color: rgba(0, 0, 0, 0.89);
+    }
+    #load-loop {
+        width: 100px;
+        height: 100px;
+        border: 10px solid rgba(0,0,0,0);
+        border-right-color:#fff;
+        border-top-color: #fff;
+        margin: auto;
+        margin-top: calc(50vh - 50px);
+        border-radius: 50%;
+        transition: .5s;
+        animation: loaded .5s linear infinite;
+    }
+    @keyframes loaded {
+        to {transform: rotate(360deg)}
+    }
+
+
+/*#################### RECURSOS OBJETOS E TAGS GENÉRICAS ###########################*/
+    .projthis-button-blue {
+        padding: 15px 35px;
+        font-size: 20px;
+        background-color: #00a6ff;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    .projthis-button-blue:hover {
+        background-color: #0296e6;
+        box-shadow: 1px 1px 4px rgba(0,0,0,.3);
+    }
+
+    .projthis-button-green {
+        padding: 15px 35px;
+        font-size: 20px;
+        background-color: #13ce66;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    .projthis-button-green:hover{
+        background-color: #10b45a;
+        box-shadow: 1px 1px 4px rgba(0,0,0,.3);
+    }
+
+    .projthis-button-orange {
+        padding: 15px 35px;
+        font-size: 20px;
+        background-color: #ff9052;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    .projthis-button-orange:hover {
+        background-color: #fd7a2e;
+        box-shadow: 1px 1px 4px rgba(0,0,0,.3);
+    }
+
+
+    .projthis-input {
+        padding: 15px 35px;
+        font-size: 20px;
+        color: #47525e;
+        margin-top: 10px;
+        border: 1px solid rgba(0,0,0,.2);
+        border-radius: 5px;
+    }
+
+    .projthis-input-password {
+        margin: 0px;
+        padding: 0px;
+    }
+    .projthis-input-password .projthis-input {
+        padding: 15px 35px;
+    }
+    .projthis-input-password i {
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        border-radius: 5px;
+        margin-left: 264px;
+        margin-top: 12px;
+        background: url('../imagens/olho-fechado.png') no-repeat;
+        background-size: 50%;
+        background-position: 50%;
+        cursor: pointer;
+        /* border: 1px solid rgba(0,0,0,.2); */
+    }
+
+    .projthis-title {
+        text-align: center;
+        font-size: 50px;
+        color: #47525e;
+        font-weight: bold;
+    }
+
+    .projthis-sub-title {
+        text-align: center;
+        font-size: 30px;
+        color: #47525e;
+        font-weight: bold;
+    }
+
+    .projthis-mine-title {
+        text-align: center;
+        font-size: 20px;
+        color: #47525e;
+        font-weight: bold;
+    }
+
+    .projthis-paragrafo {
+        text-align: center;
+        color: #8694a8;
+    }
+
+    .projthis-paragrafo-1 {
+        text-align: center;
+        color: #47525e;
+    }
+
+    .projthis-container {
+        width: 100%;
+        height: 500px;
+        margin: 10px;
+    }
+
+    .projthis-container-50 {
+        width: 50%;
+        height: 50vh;
+        margin: 10px;
+        margin: auto;
+    }
+
+    .projthis-container-80 {
+        width: 80%;
+        height: 80vh;
+        margin: 10px;
+        margin: auto;
+    }
+
+    .projthis-container-100 {
+        width: 100%;
+        height: 100vh;
+        margin: auto;
+    }
+
+    .projthis-container-50-center {
+        width: 50%;
+        height: 50vh;
+        margin: 0px;
+        position: absolute;
+        top: calc(50% - 25%);
+        bottom: calc(50% - 25%);
+        left: calc(50% - 25%);
+        right: calc(50% - 25%);
+    }
+
+    .projthis-container-80-center {
+        width: 80%;
+        height: 80vh;
+        margin: 0px;
+        position: absolute;
+        top: calc(50% - 40%);
+        bottom: calc(50% - 40%);
+        left: calc(50% - 40%);
+        right: calc(50% - 40%);
+    }
+
+    .projthis-container-100-center {
+        width: 100%;
+        height: 100vh;
+        position: absolute;
+    }
+}
