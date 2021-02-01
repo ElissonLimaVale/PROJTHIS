@@ -106,8 +106,9 @@ $("#cadastrar").on("click", () => {
         }).done((data) => {
             alert(data["mensagem"]);
             teste = data;
-        }).fail(() => {
+        }).fail((ex) => {
             alert("Ops, ocorreu uma falha na requisição");
+            teste = ex;
         });
         
     }    

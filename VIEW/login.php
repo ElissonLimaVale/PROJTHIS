@@ -11,11 +11,16 @@ include "../CONTROLLER/LoginController.php";
     <link rel="preload" as="image" href="imagens/user-heppy.png"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=0"/>
     <link rel="stylesheet" type="text/css" href="estilo/login.css"/>
-    <!--link rel="preload" as="script" href="scripts/global.js"/ -->
+    <link rel="stylesheet" type="text/css" href="estilo/globalpc.css"/>
+    <link rel="stylesheet" type="text/css" href="estilo/globalmobile.css"/>
+    <link rel="preload" as="script" href="scripts/global.js"/>
    
 </head>
-<body onload="init();">
-    
+<body onload="loadHide();">
+    <!-- load para eventos e requsições ascincronas -->
+    <div id='load-area'><div id='load-loop'></div></div>
+
+
     <div id="cadastro">
         
         <div id = "logo"></div> 
@@ -70,5 +75,6 @@ include "../CONTROLLER/LoginController.php";
     
     <!-- Scripts do do site-->
     <script src="scripts/login.js"></script>
+    <script src="scripts/global.js"></script>
 </body>
 </html>
