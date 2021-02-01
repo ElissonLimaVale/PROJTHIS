@@ -4,14 +4,8 @@ include "../CONTROLLER/LoginController.php";
 //echo "<script> alert('Computer name: ".gethostbyaddr($_SERVER['REMOTE_ADDR'])."'); </script>";
 ?>
 <!DOCTYPE html/>
-<html>
-<head lang="pt-br">
-    <style>
-        /* #inicio {
-            background-color: #1f9fe4;
-            color: rgba(255, 255, 255, 0.966);
-        } */
-    </style>
+<html lang="pt-br">
+<head>
     <meta charset="utf-8">
     <title>Projthis, compartilhe seus projetos</title>
     <link id="logo-tipo" rel="icon" href="imagens/logo-tipo.png"/>
@@ -19,10 +13,13 @@ include "../CONTROLLER/LoginController.php";
     <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=0"/>
     <link rel="stylesheet" type="text/css" href="estilo/globalpc.css"/>
     <link rel="stylesheet" type="text/css" href="estilo/globalmobile.css"/>
-    <!--link rel="preload" as="script" href="scripts/global.js"/ -->
+    <link rel="preload" as="script" href="scripts/global.js"/>
    
 </head>
-<body>
+<body onload="loadHide();">
+    <!-- load para eventos e requsições ascincronas -->
+    <div id='load-area'><div id='load-loop'></div></div>
+
     <nav id="campo-menu" class="nav-top">
         <div>
             <div id="menu-button"></div>
@@ -38,7 +35,13 @@ include "../CONTROLLER/LoginController.php";
             <li id="conta" class="item-menu">Conta</li>
             <li id="icon-user" style="padding: 0px;"></li>
         </ul>
+        <div class='searsh-area' method='post' action='index.php' hidden='true'> 
+            <button class='searsh-button-hide' onclick='Search.Close();'></button>
+            <input id='search' name='pesquisar' placeholder='Pesquisar..'/> 
+            <button type='submit' class='searsh-button' onclick='search();'></button> 
+        </div>
     </nav>
+    <!-- Template -->
     <div id="template">
         <div class="div2">
             <h1 class="titulo-logo">Projthis</h1>

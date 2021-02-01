@@ -3,21 +3,13 @@ let page = 0;
 let width_menu = window.innerWidth > 900 ? 50: 90;
 
 //#region CONFIGURAÇÕES GENÉRICAS DE ELEMENTOS DE TELA
-$(".projthis-input-password").append("<i></i>"
-    +"<input type='password' class='projthis-input' placeholder='Senha'/>"
-);
+loadShow();
 //#endregion
 
 
 //#region  OBJETO DE CAMPO DE PESQUISA
 var Search = {
     Open: () => {
-        $("#campo-menu").append(" <div class='searsh-area' method='post' action='index.php' hidden='true'> " 
-        + " <button class='searsh-button-hide' onclick='Search.Close();'></button> "
-        + " <input id='search' name='pesquisar' placeholder='Pesquisar..'/> "
-        + " <button type='submit' class='searsh-button' onclick='search();'></button> "
-        + " </div>");
-
         if($(".searsh-area").is(":hidden")){
             $(".menu").hide();
             $(".searsh-area").show(100);
@@ -53,7 +45,7 @@ if(logotipo.substring(window.location.href.length - 3, window.location.href.leng
     document.getElementById("logo-tipo").href = window.location.href.substring(0, window.location.href.length - 9) +
     "imagens/logo-tipo.png";
 }else{
-    document.getElementById("logo-tipo").href = window.location.href + "imagens/logo-tipo.png";
+    document.getElementById("logo-tipo").href = window.location.href + "~/PROJTHIS/VIEW/imagens/logo-tipo.png";
 }
 //#endregion
 
@@ -147,8 +139,9 @@ function search(){
 
 //#region LOAD NOTIFICATION
 function loadShow(){
-    $(document.body).append("<div id='load-area'></div>");
-    $("#load-area").append("<div id='load-loop'></div>");
+    //$("body").append("<div id='load-area'><div id='load-loop'></div></div>");
+    //$("#load-area").append("");
+    $("#load-area").show();
 }
 function loadHide(){
     $("#load-area").hide();
