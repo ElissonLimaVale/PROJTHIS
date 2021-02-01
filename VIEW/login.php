@@ -11,6 +11,8 @@ include "../CONTROLLER/LoginController.php";
     <link rel="preload" as="image" href="imagens/user-heppy.png"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=0"/>
     <link rel="stylesheet" type="text/css" href="estilo/login.css"/>
+    <link rel="stylesheet" type="text/css" href="estilo/globalpc.css"/>
+    <link rel="stylesheet" type="text/css" href="estilo/globalmobile.css"/>
     <link rel="preload" as="script" href="scripts/global.js"/>
    
 </head>
