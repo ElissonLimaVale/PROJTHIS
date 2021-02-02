@@ -39,25 +39,45 @@ var Search = {
 };
 //#endregion
 
+//#region OBJETO DE MENU
+var menu = {
+    show: () => {
+        $(".menu").show();
+        $(".searsh-area").hide();
+        document.getElementById("campo-menu").style = "top: 0px;";
+        $("#logo").show(350);
+        $("#lupa").show(400);
+    },
+
+    hide: () => {
+        document.getElementById("campo-menu").style = "top: -300px;";
+        $("#logo").hide(400);
+        $("#lupa").hide(400);
+    }
+}
+//#endregion
+
 //#region ADIÇÃO DA LOGO ICONE
 logotipo = window.location.href;
 if(logotipo.substring(window.location.href.length - 3, window.location.href.length) == "php"){
     document.getElementById("logo-tipo").href = window.location.href.substring(0, window.location.href.length - 9) +
     "imagens/logo-tipo.png";
 }else{
-    document.getElementById("logo-tipo").href = window.location.href + "~/PROJTHIS/VIEW/imagens/logo-tipo.png";
+    document.getElementById("logo-tipo").href = window.location.href + "/imagens/logo-tipo.png";
 }
 //#endregion
 
 //#region CONTROLE DE ANIMAÇÃO E POSIÇÃO DO MENU
 document.onscroll = () => {
     if(document.body.scrollTop > page && document.body.scrollTop > 200){
-        document.getElementById("campo-menu").style = "top: -300px;";
+        //document.getElementById("campo-menu").style = "top: -300px;";
+        menu.hide();
         page = document.body.scrollTop;
     }else if(document.body.scrollTop < page){
-        $(".menu").show();
-        $(".searsh-area").hide();
-        document.getElementById("campo-menu").style = "top: 0px;";
+        menu.show();
+        // $(".menu").show();
+        // $(".searsh-area").hide();
+        // document.getElementById("campo-menu").style = "top: 0px;";
         page = document.body.scrollTop
     }
 };

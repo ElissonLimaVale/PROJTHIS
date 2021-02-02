@@ -13,6 +13,7 @@ include "../CONTROLLER/LoginController.php";
     <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=0"/>
     <link rel="stylesheet" type="text/css" href="estilo/globalpc.css"/>
     <link rel="stylesheet" type="text/css" href="estilo/globalmobile.css"/>
+    <link rel="stylesheet" type="text/css" href="estilo/inicio.css"/>
     <link rel="preload" as="script" href="scripts/global.js"/>
    
 </head>
@@ -43,7 +44,7 @@ include "../CONTROLLER/LoginController.php";
     </nav>
     <!-- Template -->
     <div id="template">
-        <div class="div2">
+        <div class="col-2">
             <h1 class="titulo-logo">Projthis</h1>
             <div class="titulo-div">
                 <h1 class="titulo">Jogue,</h1>
@@ -52,8 +53,10 @@ include "../CONTROLLER/LoginController.php";
             </div>
             <img id="pandora" src="imagens/pancorrendo.gif"/>
         </div>
-        <div class="div2">
-
+        <div class="col-2">
+            <a>
+                <button class="projthis-button-orange" id="cadastre-se">Cadastre-se</button>
+            </a>
         </div>
     </div>
 
