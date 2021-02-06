@@ -325,7 +325,7 @@ a {
         margin: auto;
         margin-top: calc(50vh - 50px);
         border-radius: 50%;
-        transition: .5s;
+        transition: 1s;
         animation: loaded .5s linear infinite;
     }
     @keyframes loaded {
