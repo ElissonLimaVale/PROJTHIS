@@ -15,19 +15,25 @@
         public function __construct()
         {
             $this->_controller = new LoginController();
+            header('Content-Type: application/json');
         }
 
         public function Cadastrar(){
-            header('Content-Type: application/json');
+            $response = array("data" => false, "mensagem" => "Por Favor, preencha todos os campos!");
 
-            if(!isset($_POST["nome"]) || !isset($_POST["email"]) || !isset($_POST["senha"])){
-                $response = array("data" => false, "mensagem" => "Por Favor, preencha todos os campos!");
-                echo json_encode($response);
+            if(isset($_POST["nome"]) || isset($_POST["email"]) || isset($_POST["senha"])){
+                
+                $nome = $_POST["nome"];
+                $email = $_POST["email"];
+                $senha = $_POST["senha"];
+                if($email == '' || $senha == '' || $nome == ''){
+                    echo json_encode($response);
+                }else{
+                    $response =  $this->_controller->Cadastrar($nome, $email, $senha);
+                    //header('Content-Type: application/json');
+                    echo json_encode($response);
+                }
             }
-
-            $response =  $this->_controller->Cadastrar($_POST["nome"], $_POST["email"], $_POST["senha"]);
-            //header('Content-Type: application/json');
-            echo json_encode($response);
         }
 
         

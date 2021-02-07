@@ -111,7 +111,9 @@ $("#lupa").click(() => {
 });
 
 $(".searsh-button-hide").click(() => {
-    Search.Close();
+    if($("#search").val() != ""){
+        Search.Close();
+    }
 });
 
 // Usuario piscando

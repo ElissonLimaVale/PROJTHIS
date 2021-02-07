@@ -95,7 +95,6 @@ $("#cadastrar").on("click", () => {
         bootbox.alert("Por favor, preencha todos os campos!");
     }else{
         loadShow();
-
         $.ajax({
             method: "POST",
             url: "../ASCINC/login.php",
@@ -111,9 +110,9 @@ $("#cadastrar").on("click", () => {
                 window.location.href = "localhost/PROJTHIS/VIEW/";
             }
             bootbox.alert(data.mensagem);
-        }).fail(() => {
+        }).fail((error) => {
             loadHide();
-            bootbox.alert("Ops, ocorreu uma falha na requisição");
+            bootbox.alert("Ops, ocorreu uma falha na requisição!");
         });
         
     }    
