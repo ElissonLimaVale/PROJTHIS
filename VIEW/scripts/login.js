@@ -1,4 +1,3 @@
-let teste;
 
 //#region  ESCOLHA DE TELA LOGIN
 $(document).ready(() => {
