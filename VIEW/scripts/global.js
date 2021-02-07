@@ -4,6 +4,26 @@ let width_menu = window.innerWidth > 900 ? 50: 90;
 
 //#region CONFIGURAÇÕES GENÉRICAS DE ELEMENTOS DE TELA
 loadShow();
+$('.projthis-input-password').length ? $('.projthis-input-password').append("<input class='projthis-input' id='senha-default' type='password' placeholder='Senha' required /><i id='olho'></i>"): 0;
+let inputpassword = {
+    input: document.getElementById('senha-default'),
+    show: function () {
+        this.input.setAttribute('type', 'text');
+        $('#olho').css('background', "url('imagens/olho-aberto.png') no-repeat");
+        $('#olho').css('background-size', '50%');
+        $('#olho').css('background-position', '50%');
+    }, 
+    hide: function () {
+        this.input.setAttribute('type', 'password');
+        $('#olho').css('background', "url('imagens/olho-fechado.png') no-repeat");
+        $('#olho').css('background-size', '50%');
+        $('#olho').css('background-position', '50%');
+    }
+};
+$('#olho').on('click', () => {
+    let input = document.getElementById('senha-default');
+    input.getAttribute('type') == 'password' ? inputpassword.show(): inputpassword.hide();
+});
 //#endregion
 
 

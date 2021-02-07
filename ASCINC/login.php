@@ -18,19 +18,21 @@
         }
 
         public function Cadastrar(){
-
-            $usuario = $_POST["nome"];
-            $email = $_POST["email"];
-            $senha = $_POST["senha"];
-
-            $response =  $this->_controller->Cadastrar($usuario, $email, $senha);
             header('Content-Type: application/json');
+
+            if(!isset($_POST["nome"]) || !isset($_POST["email"]) || !isset($_POST["senha"])){
+                $response = array("data" => false, "mensagem" => "Por Favor, preencha todos os campos!");
+                return json_encode($response);
+            }
+
+            $response =  $this->_controller->Cadastrar($_POST["nome"], $_POST["email"], $_POST["senha"]);
+            
             echo json_encode($response);
         }
 
         
         public function Login($email, $senha){
-            return $_controller->Login($email, $senha);
+            return $this->_controller->Login($email, $senha);
         }
     }
 ?>
