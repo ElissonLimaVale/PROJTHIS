@@ -18,7 +18,7 @@ include "../CONTROLLER/LoginController.php";
 </head>
 <body onload="loadHide();">
     <!-- load para eventos e requsições ascincronas -->
-    <div id='load-area'><div id='load-loop'></div></div>
+    <!-- <div id='load-area'><div id='load-loop'></div></div> -->
 
 
     <div id="cadastro">
@@ -70,8 +70,10 @@ include "../CONTROLLER/LoginController.php";
 
      <!--- bibliotecas - frameworks - recursos --->
      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <!-- java script -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="../PASTAS_PROJETO/ACE ADMIN/scripts/bootbox.js"></script>
     
     <!-- Scripts do do site-->
     <script src="scripts/login.js"></script>
