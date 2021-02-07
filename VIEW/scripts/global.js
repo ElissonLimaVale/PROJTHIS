@@ -42,24 +42,28 @@ var Search = {
 //#region OBJETO DE MENU
 var menu = {
     show: () => {
-        $(".menu").show();
-        $(".searsh-area").hide();
-        document.getElementById("campo-menu").style = "top: 0px;";
-        $("#logo").show(350);
-        $("#lupa").show(400);
+        if($("#campo-menu") != null){
+            $(".menu").show();
+            $(".searsh-area").hide();
+            $("#campo-menu").css("top","0px");
+            $("#logo").show(350);
+            $("#lupa").show(400);
+        }
     },
 
     hide: () => {
-        document.getElementById("campo-menu").style = "top: -300px;";
-        $("#logo").hide(400);
-        $("#lupa").hide(400);
+        if($("#campo-menu") != null){
+            $("#campo-menu").css("top","-300px");
+            $("#logo").hide(400);
+            $("#lupa").hide(400);
+        }
     }
 }
 //#endregion
 
 //#region ADIÇÃO DA LOGO ICONE
-logotipo = window.location.href;
-if(logotipo.substring(window.location.href.length - 3, window.location.href.length) == "php"){
+
+if(window.location.href.substring(window.location.href.length - 3, window.location.href.length) == "php"){
     document.getElementById("logo-tipo").href = window.location.href.substring(0, window.location.href.length - 9) +
     "imagens/logo-tipo.png";
 }else{
@@ -159,12 +163,15 @@ function search(){
 
 //#region LOAD NOTIFICATION
 function loadShow(){
-    //$("body").append("<div id='load-area'><div id='load-loop'></div></div>");
-    //$("#load-area").append("");
-    $("#load-area").show();
+    if($("#load-area").length){
+        $("#load-area").show()
+    }else{
+        $("body").append("<div id='load-area'><div id='load-loop'></div></div>");
+        $("#load-area").show();
+    };
 }
 function loadHide(){
-    $("#load-area").hide();
+    $("#load-area").hide();;
 }
 //#endregion
 

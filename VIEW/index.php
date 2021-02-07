@@ -19,7 +19,7 @@ include "../CONTROLLER/LoginController.php";
 </head>
 <body onload="loadHide();">
     <!-- load para eventos e requsições ascincronas -->
-    <div id='load-area'><div id='load-loop'></div></div>
+    <!-- <div id='load-area'><div id='load-loop'></div></div> -->
 
     <nav id="campo-menu" class="nav-top">
         <div>
@@ -80,7 +80,7 @@ include "../CONTROLLER/LoginController.php";
             <div class='item-result'>
                 <div class='icone-play' style="background: url('<?php echo $caminho[$i]?>') no-repeat;background-size: 120%;background-position: 50%;">
                     <div class='sub-search-result-div-item'>
-                        <label class='buttom-item-result' href='#'>Acessar</label>
+                        <label class='buttom-item-result projthis-button-orange' href='#'>Acessar</label>
                     </div>
                 </div>
                 <label class='nome-play'>
@@ -116,6 +116,7 @@ include "../CONTROLLER/LoginController.php";
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="../PASTAS_PROJETO/ACE ADMIN/scripts/bootbox.js"></script>
     
     <!-- Scripts do do site-->
     <script src="scripts/global.js"></script>
