@@ -334,6 +334,23 @@ a {
 
 
 /*#################### RECURSOS OBJETOS E TAGS GENÉRICAS ###########################*/
+    
+    .projthis-widget-box {
+        width: 100%;
+        border: 1px solid rgba(0,0,0,.2);
+        overflow: hidden;
+    }
+    .projthis-widget-header {
+        width: 100%;
+        background-image: 
+        linear-gradient(
+            to top,
+            #1f9fe4, 
+            #86d5ff
+        );
+        color: rgba(255, 255, 255, 0.945);
+        padding: 5px 10px;
+    }
     .projthis-button-blue {
         padding: 15px 35px;
         font-size: 20px;
