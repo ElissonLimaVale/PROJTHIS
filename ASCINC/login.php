@@ -22,11 +22,11 @@
 
             if(!isset($_POST["nome"]) || !isset($_POST["email"]) || !isset($_POST["senha"])){
                 $response = array("data" => false, "mensagem" => "Por Favor, preencha todos os campos!");
-                return json_encode($response);
+                echo json_encode($response);
             }
 
             $response =  $this->_controller->Cadastrar($_POST["nome"], $_POST["email"], $_POST["senha"]);
-            
+            //header('Content-Type: application/json');
             echo json_encode($response);
         }
 

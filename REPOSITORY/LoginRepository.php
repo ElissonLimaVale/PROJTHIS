@@ -17,7 +17,8 @@ class LoginRepository implements ILoginRepository {
         $response = array('data' => true, 'mensagem' => 'Cadastrado com sucesso!');
         $hash = $this->_encrypt->GetHash($senha);
 
-        // $response = "Cadastrado com sucesso! usuario = ".$usuario. " Email = ". $email. " Senha = " .$hash;
+        $senha = ""; //sobrescreve a senha para não manter em memoria
+        
         try {
              $conexao = $this->_conexao->conectar();
              //Valida se a conexão é nula 
