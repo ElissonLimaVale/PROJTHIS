@@ -97,8 +97,8 @@ $("#cadastrar").on("click", () => {
     }else{
         loadShow();
         $.ajax({
-            method: "post",
-            url: window.location.href,
+            method: "POST",
+            url: "../ASCINC/login.php",
             data: {
                 metodo: "cadastrar",
                 nome: nome,
@@ -110,7 +110,7 @@ $("#cadastrar").on("click", () => {
             if(data.data){
                 window.location.href = "localhost/PROJTHIS/VIEW/";
             }
-            bootbox.alert(data["mensagem"]);
+            bootbox.alert(data.mensagem);
         }).fail((ex) => {
             loadHide();
             bootbox.alert("Ops, ocorreu uma falha na requisição");
