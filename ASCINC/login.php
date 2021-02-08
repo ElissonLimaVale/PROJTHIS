@@ -38,7 +38,7 @@
 
         
         public function Login($email, $senha){
-            return $this->_controller->Login($email, $senha);
+            echo $this->_controller->Login($email, $senha);
         }
     }
 ?>

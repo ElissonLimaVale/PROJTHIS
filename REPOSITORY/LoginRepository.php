@@ -1,11 +1,10 @@
 <?php
-
 include "BASE/conexao.php";
-include "BASE/Encrypt.php";
 
 class LoginRepository implements ILoginRepository {
-    private $_conexao;
+
     private $_encrypt;
+    private $_conexao;
     //Construtor da classe
     public function __construct(){
         $this->_conexao = new Conexao();
@@ -28,12 +27,12 @@ class LoginRepository implements ILoginRepository {
                 return $response;
              }
              //Verifica se ja existe usuario cadastrado
-             $query = "Select * From usuario WHERE email = '{$email}'";
+             $query = "SELECT * From usuario WHERE email = '{$email}'";
              $result = $conexao->query($query);
              $valida = mysqli_num_rows($result);
              if($valida == 0 || empty($valida)){
                  // Cadastra o usuario
-                $sql = "Insert into usuario(nome, email, senha) values ('{$usuario}', '{$email}', '{$hash}')";
+                $sql = "INSERT INTO usuario(nome, email, senha) VALUES ('{$usuario}', '{$email}', '{$hash}')";
                 $cad = $conexao->query($sql);
              }else{
                 //retorna mensagem de erro caso o usuario ja esteja cadastrado

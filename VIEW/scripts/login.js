@@ -103,12 +103,12 @@ $("#cadastrar").on("click", () => {
                 nome: nome,
                 email: email,
                 senha: senha
-            },
+            }
         }).done((data) => {
             loadHide();
-            if(data.data){
-                window.location.href = "localhost/PROJTHIS/VIEW/";
-            }
+            // if(data.data){
+            //     window.location.href = "index.php";
+            // }
             bootbox.alert(data.mensagem);
         }).fail((error) => {
             loadHide();
