@@ -1,4 +1,5 @@
 <?php
+session_start();
     include "../CONTROLLER/LoginController.php";
 
     if(isset($_POST["metodo"])){
@@ -31,6 +32,9 @@
                 }else{
                     $response =  $this->_controller->Cadastrar($nome, $email, $senha);
                     //header('Content-Type: application/json');
+                    if($response['data']){
+                        $_SESSION['usuario'] = array("nome" => $nome,"email" => $email);
+                    }
                     echo json_encode($response);
                 }
             }

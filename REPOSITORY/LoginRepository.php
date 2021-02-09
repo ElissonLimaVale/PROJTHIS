@@ -27,19 +27,21 @@ class LoginRepository implements ILoginRepository {
                 return $response;
              }
              //Verifica se ja existe usuario cadastrado
-             $query = "SELECT * From usuario WHERE email = '{$email}'";
+             $query = "select * From usuario where email = '{$email}'";
              $result = $conexao->query($query);
              $valida = mysqli_num_rows($result);
              if($valida == 0 || empty($valida)){
                  // Cadastra o usuario
-                $sql = "INSERT INTO usuario(nome, email, senha) VALUES ('{$usuario}', '{$email}', '{$hash}')";
-                $cad = $conexao->query($sql);
+                $sql = "insert into usuario(nome, email, senha) values ('{$usuario}', '{$email}', '{$hash}')";
+                $conexao->query($sql);
+                //mysqli_close($conexao);
              }else{
                 //retorna mensagem de erro caso o usuario ja esteja cadastrado
                 $response['data'] = false;
                 $response['mensagem'] = "Ops, já existe um usuário cadastrado com esse e-mail! ";
                 return $response;
              }
+
         }catch(Exception $s) {
             //trata uma exeção
              $response['data'] = false;

@@ -1,4 +1,8 @@
 <?php //include "../CONTROLLER/HomePageController.php";
+session_start();
+if(isset($_SESSION['usuario'])){
+    
+}
 include "../CONTROLLER/LoginController.php";
 //Exibe o nome do computador do usuario
 //echo "<script> alert('Computer name: ".gethostbyaddr($_SERVER['REMOTE_ADDR'])."'); </script>";

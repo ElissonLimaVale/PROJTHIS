@@ -106,10 +106,11 @@ $("#cadastrar").on("click", () => {
             }
         }).done((data) => {
             loadHide();
-            // if(data.data){
-            //     window.location.href = "index.php";
-            // }
-            bootbox.alert(data.mensagem);
+            bootbox.alert(data.mensagem, () => {
+                if(data.data){
+                    window.location.href = "/projthis/view";
+                }
+            });
         }).fail((error) => {
             loadHide();
             bootbox.alert("Ops, ocorreu uma falha na requisição!");
