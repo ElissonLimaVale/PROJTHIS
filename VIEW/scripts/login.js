@@ -1,8 +1,8 @@
-let teste;
 
 //#region  ESCOLHA DE TELA LOGIN
 $(document).ready(() => {
-
+    $('#cadastro').css('height', window.innerHeight + 'px');
+    $('.login-bar').css('height', (window.innerHeight / 2) + (window.innerHeight / 3) + 'px');
     var query = location.search.slice(1);
     var partes = query.split('&');
     var data = {};
@@ -49,9 +49,9 @@ $(document).ready(() => {
 });
 //Evento de mudança para tela de login
 $("#entre").on("click", () => {
-    $("#cadastro").hide();
-    $("#login").show();
-    $("esqueceu-senha").hide();
+    // $("#cadastro").hide();
+    // $("#login").show();
+    // $("#esqueceu-senha").hide();
 });
 
 //#endregion
@@ -92,10 +92,11 @@ $("#cadastrar").on("click", () => {
     let senha = $("input[name=senha]").val();
     
     if(nome == "" || email == "" || senha == ""){
-        alert("Por favor, preencha todos os campos!");
+        bootbox.alert("Por favor, preencha todos os campos!");
     }else{
+        loadShow();
         $.ajax({
-            method: "post",
+            method: "POST",
             url: "../ASCINC/login.php",
             data: {
                 metodo: "cadastrar",
@@ -104,11 +105,15 @@ $("#cadastrar").on("click", () => {
                 senha: senha
             }
         }).done((data) => {
-            alert(data["mensagem"]);
-            teste = data;
-        }).fail((ex) => {
-            alert("Ops, ocorreu uma falha na requisição");
-            teste = ex;
+            loadHide();
+            bootbox.alert(data.mensagem, () => {
+                if(data.data){
+                    window.location.href = "/projthis/view";
+                }
+            });
+        }).fail((error) => {
+            loadHide();
+            bootbox.alert("Ops, ocorreu uma falha na requisição!");
         });
         
     }    

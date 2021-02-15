@@ -1,4 +1,5 @@
 <?php
+session_start();
     include "../CONTROLLER/LoginController.php";
 
     if(isset($_POST["metodo"])){
@@ -15,22 +16,33 @@
         public function __construct()
         {
             $this->_controller = new LoginController();
+            header('Content-Type: application/json');
         }
 
         public function Cadastrar(){
+            $response = array("data" => false, "mensagem" => "Por Favor, preencha todos os campos!");
 
-            $usuario = $_POST["nome"];
-            $email = $_POST["email"];
-            $senha = $_POST["senha"];
-
-            $response =  $this->_controller->Cadastrar($usuario, $email, $senha);
-            header('Content-Type: application/json');
-            echo json_encode($response);
+            if(isset($_POST["nome"]) || isset($_POST["email"]) || isset($_POST["senha"])){
+                
+                $nome = $_POST["nome"];
+                $email = $_POST["email"];
+                $senha = $_POST["senha"];
+                if($email == '' || $senha == '' || $nome == ''){
+                    echo json_encode($response);
+                }else{
+                    $response =  $this->_controller->Cadastrar($nome, $email, $senha);
+                    //header('Content-Type: application/json');
+                    if($response['data']){
+                        $_SESSION['usuario'] = array("nome" => $nome,"email" => $email);
+                    }
+                    echo json_encode($response);
+                }
+            }
         }
 
         
         public function Login($email, $senha){
-            return $_controller->Login($email, $senha);
+            echo $this->_controller->Login($email, $senha);
         }
     }
 ?>

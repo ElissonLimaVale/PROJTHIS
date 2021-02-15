@@ -1,5 +1,4 @@
 <?php
-include "Config.php";
 
 class Encrypt {
     private $_config;
@@ -34,4 +33,3 @@ class Encrypt {
 
 
 
-?>

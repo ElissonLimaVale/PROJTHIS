@@ -1,11 +1,10 @@
 <?php
-
 include "BASE/conexao.php";
-include "BASE/Encrypt.php";
 
 class LoginRepository implements ILoginRepository {
-    private $_conexao;
+
     private $_encrypt;
+    private $_conexao;
     //Construtor da classe
     public function __construct(){
         $this->_conexao = new Conexao();
@@ -17,7 +16,8 @@ class LoginRepository implements ILoginRepository {
         $response = array('data' => true, 'mensagem' => 'Cadastrado com sucesso!');
         $hash = $this->_encrypt->GetHash($senha);
 
-        // $response = "Cadastrado com sucesso! usuario = ".$usuario. " Email = ". $email. " Senha = " .$hash;
+        $senha = ""; //sobrescreve a senha para não manter em memoria
+        
         try {
              $conexao = $this->_conexao->conectar();
              //Valida se a conexão é nula 
@@ -27,19 +27,21 @@ class LoginRepository implements ILoginRepository {
                 return $response;
              }
              //Verifica se ja existe usuario cadastrado
-             $query = "Select * From usuario WHERE email = '{$email}'";
+             $query = "select * From usuario where email = '{$email}'";
              $result = $conexao->query($query);
              $valida = mysqli_num_rows($result);
              if($valida == 0 || empty($valida)){
                  // Cadastra o usuario
-                $sql = "Insert into usuario(nome, email, senha) values ('{$usuario}', '{$email}', '{$hash}')";
-                $cad = $conexao->query($sql);
+                $sql = "insert into usuario(nome, email, senha) values ('{$usuario}', '{$email}', '{$hash}')";
+                $conexao->query($sql);
+                //mysqli_close($conexao);
              }else{
                 //retorna mensagem de erro caso o usuario ja esteja cadastrado
                 $response['data'] = false;
                 $response['mensagem'] = "Ops, já existe um usuário cadastrado com esse e-mail! ";
                 return $response;
              }
+
         }catch(Exception $s) {
             //trata uma exeção
              $response['data'] = false;
