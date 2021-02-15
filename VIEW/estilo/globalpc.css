@@ -4,9 +4,6 @@
     font-family: impact Haettenschweiler, sans-serif;
     font-size: 18px;
 }
-a {
-    display: none;
-}
 @media screen and (min-width: 1000px){
     
 /*######### FIM DE FORMATAÇÃO DO MENU #####*/
@@ -334,6 +331,23 @@ a {
 
 
 /*#################### RECURSOS OBJETOS E TAGS GENÉRICAS ###########################*/
+    
+    .projthis-widget-box {
+        width: 100%;
+        border: 1px solid rgba(0,0,0,.2);
+        overflow: hidden;
+    }
+    .projthis-widget-header {
+        width: 100%;
+        background-image: 
+        linear-gradient(
+            to top,
+            #1f9fe4, 
+            #86d5ff
+        );
+        color: rgba(255, 255, 255, 0.945);
+        padding: 5px 10px;
+    }
     .projthis-button-blue {
         padding: 15px 35px;
         font-size: 20px;
@@ -378,6 +392,7 @@ a {
 
 
     .projthis-input {
+        width: 100%;
         padding: 15px 35px;
         font-size: 20px;
         color: #47525e;
@@ -387,19 +402,22 @@ a {
     }
 
     .projthis-input-password {
+        display: inline;
         margin: 0px;
         padding: 0px;
+        overflow: hidden;
     }
     .projthis-input-password .projthis-input {
         padding: 15px 35px;
     }
     .projthis-input-password i {
-        position: absolute;
+        position: relative;
+        float: right;
+        margin-right: 10px;
         width: 50px;
+        top: -55px;
         height: 50px;
         border-radius: 5px;
-        margin-left: 264px;
-        margin-top: 12px;
         background: url('../imagens/olho-fechado.png') no-repeat;
         background-size: 50%;
         background-position: 50%;

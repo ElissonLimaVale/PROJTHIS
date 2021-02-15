@@ -1,5 +1,6 @@
 <?php //include "../CONTROLLER/HomePageController.php";
 include "../CONTROLLER/LoginController.php";
+session_start();
 ?>
 <!DOCTYPE html/>
 <html>
