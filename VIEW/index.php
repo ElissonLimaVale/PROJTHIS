@@ -43,6 +43,10 @@ include "../CONTROLLER/LoginController.php";
         </div>
     </nav>
     <!-- Template -->
+    <?php if (!isset($_SESSION["usuario"])) 
+    {
+    ?>
+    <!-- QUANDO O USUARIO ESTA DESLOGADO -->
     <div id="template">
         <div class="col-2">
             <h1 class="titulo-logo">Projthis</h1>
@@ -59,7 +63,15 @@ include "../CONTROLLER/LoginController.php";
             </a>
         </div>
     </div>
+    <?php
+    }
+    else {
+    ?>
+    <!-- QUANDO O USUARIO ESTA LOGADO -->
 
+    <?php
+    }
+    ?>
     
     <!-- AREA DE RESULTADO DE UMA PESQUISA -->
     <div id='search-result-area' hidden='true'>
