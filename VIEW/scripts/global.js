@@ -24,6 +24,11 @@ $('#olho').on('click', () => {
     let input = document.getElementById('senha-default');
     input.getAttribute('type') == 'password' ? inputpassword.show(): inputpassword.hide();
 });
+
+//formatação de divs padrão
+$(".projthis-container-wight, .projthis-container-blue, .projthis-container").css(
+    "height", window.innerHeight + "px"
+);
 //#endregion
 
 

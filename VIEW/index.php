@@ -3,6 +3,16 @@ session_start();
 if(isset($_SESSION['usuario'])){
     
 }
+$caminho = array("imagens/voo.png", 
+    "imagens/teste.jpg",
+    "imagens/veio.jpg",
+    "imagens/minhoca.jpg",
+    "imagens/among.jpg",
+    "imagens/bob.jpg",
+    "imagens/free.jpeg",
+    "imagens/arqueiro.jpg",
+    "imagens/lupa2.png"
+);
 include "../CONTROLLER/LoginController.php";
 //Exibe o nome do computador do usuario
 //echo "<script> alert('Computer name: ".gethostbyaddr($_SERVER['REMOTE_ADDR'])."'); </script>";
@@ -47,8 +57,42 @@ include "../CONTROLLER/LoginController.php";
         </div>
     </nav>
     <!-- Template -->
-    <?php if (!isset($_SESSION["usuario"])) 
+    <?php if (isset($_SESSION["usuario"])) 
     {
+    ?>
+    <!-- QUANDO O USUARIO ESTA LOGADO -->
+        
+    <div class="projthis-container-white">
+        <div class="projthis-container-50">
+            <div style="width: 100%; height: 70px;">
+            </div>
+            <div >
+                <label class="projthis-title" style="margin: 10px;">Crie uma comunidade</label>
+                <i></i>
+            </div>
+            <div>
+                <label class="projthis-sub-title" style="margin: 12px;">Comunidades que você participa:</label>
+            </div>
+            <div id="his_comunidades">
+                <?php 
+                    foreach($caminho as $item){
+                ?>
+                    <!--foreach para resultado de ultimas visualizações -->
+                    <div class="item-ultimos" style="background: url('<?=$item?>') no-repeat;background-size: 180%;background-position: 50%;"></div>
+                <?php 
+                    } 
+                ?>
+            </div>
+        </div>
+        <div id="profile-data" class="projthis-container-50">
+
+        </div>
+    </div>
+    
+    
+    <?php
+    }
+    else {
     ?>
     <!-- QUANDO O USUARIO ESTA DESLOGADO -->
     <div id="template">
@@ -67,12 +111,7 @@ include "../CONTROLLER/LoginController.php";
             </a>
         </div>
     </div>
-    <?php
-    }
-    else {
-    ?>
-    <!-- QUANDO O USUARIO ESTA LOGADO -->
-
+    
     <?php
     }
     ?>
@@ -82,19 +121,11 @@ include "../CONTROLLER/LoginController.php";
         <div id='result-search'>
             <label id='titulo-search-area'>Resultados: <i id='close-result-search' onclick='Search.CloseArea();'></i></label>
             <?php 
-            $caminho = array("imagens/voo.png", 
-            "imagens/teste.jpg",
-            "imagens/veio.jpg",
-            "imagens/minhoca.jpg",
-            "imagens/among.jpg",
-            "imagens/bob.jpg",
-            "imagens/free.jpeg",
-            "imagens/arqueiro.jpg",
-            "imagens/lupa2.png");
-            for($i = 0; $i < 9;$i++){
+            
+            foreach($caminho as $back){
             ?>
             <div class='item-result'>
-                <div class='icone-play' style="background: url('<?php echo $caminho[$i]?>') no-repeat;background-size: 120%;background-position: 50%;">
+                <div class='icone-play' style="background: url('<?=$back?>') no-repeat;background-size: 120%;background-position: 50%;">
                     <div class='sub-search-result-div-item'>
                         <label class='buttom-item-result projthis-button-orange' href='#'>Acessar</label>
                     </div>
