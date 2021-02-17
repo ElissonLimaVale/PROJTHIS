@@ -38,7 +38,7 @@ include "../CONTROLLER/LoginController.php";
     <nav id="campo-menu" class="nav-top">
         <div>
             <div id="menu-button"></div>
-            <div id="logo"></div>
+            <a href="/projthis/view/"><div id="logo"></div></a>
         </div>
         <ul class="menu">
             <li id="inicio" class="item-menu">Início</li>
@@ -83,9 +83,22 @@ include "../CONTROLLER/LoginController.php";
                     } 
                 ?>
             </div>
+            <div>
+                <label class="projthis-sub-title" style="margin: 12px;">Continuar jogando:</label>
+            </div>
+            <div id="his_comunidades">
+                <?php 
+                    foreach($caminho as $item){
+                ?>
+                    <!--foreach para resultado de ultimas visualizações -->
+                    <div class="item-ultimos" style="background: url('<?=$item?>') no-repeat;background-size: 180%;background-position: 50%;"></div>
+                <?php 
+                    } 
+                ?>
+            </div>
         </div>
+        
         <div id="profile-data" class="projthis-container-50">
-
         </div>
     </div>
     
@@ -106,7 +119,7 @@ include "../CONTROLLER/LoginController.php";
             <img id="pandora" src="imagens/pancorrendo.gif"/>
         </div>
         <div class="col-2">
-            <a>
+            <a href="/projthis/view/login.php">
                 <button class="projthis-button-orange" id="cadastre-se">Cadastre-se</button>
             </a>
         </div>

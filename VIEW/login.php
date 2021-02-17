@@ -31,6 +31,7 @@ session_start();
         <p id="sub-title">Cadastre-se e participe da nossa comunidade, crie uma comunidade, crie projetos e principalmente divirta-se!</p>
 
         <div class="login-bar">
+
             <input class="input-logon" type="text" name="usuario" placeholder="Nome de usuario" required/>
 
             <input class="input-logon" type="email" name="email" placeholder="E-mail" required/>
@@ -38,13 +39,11 @@ session_start();
             <input class="input-logon" type="password" name="senha" placeholder="Senha" required/>
 
             <button id="cadastrar">Cadastrar</button>
+
+            <p id="termos-condicoes">Ao se cadastrar você aceita automaticamente nossos <br/> <a href="#">Termos e Condições</a></p>
+
+            <h3 id="conta-entrar">Já tem uma conta? <a id="entre">Entre</a></h3>
         </div>
-
-        <p id="termos-condicoes">Ao se cadastrar você aceita automaticamente nossos <br/> <a href="#">Termos e Condições</a></p>
-
-    
-        <h3 id="conta-entrar">Já tem uma conta? <a id="entre">Entre</a></h3>
-
         
         <div id="left1" class="colunas"></div>
         <div id="left2" class="colunas"></div>

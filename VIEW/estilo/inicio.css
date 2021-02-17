@@ -87,18 +87,18 @@
         width: 100%;
         height: 180px;
         overflow-y: hidden;
-        overflow-x: auto;
+        touch-action: pan-y;
         white-space: nowrap;
+        z-index: 2;
     }
     #profile-data{
-        width: 38%;
+        /* width: 38%; */
         border: 1px solid rgba(0,0,0,.2);
         /* overflow-y: auto; */
-        float: right;
     }
     .item-ultimos {
-        width: 150px;
-        height: 150px;
+        width: 130px;
+        height: 130px;
         margin: 25px;
         /* border: 5px solid rgba(0,0,0,.2); */
         background-size: 150%;
