@@ -36,7 +36,7 @@ session_start();
 
             <input class="input-logon" type="email" name="email" placeholder="E-mail" required/>
 
-            <input class="input-logon" type="password" name="senha" placeholder="Senha" required/>
+            <div class="projthis-input-password"></div>
 
             <button id="cadastrar">Cadastrar</button>
 
