@@ -19,11 +19,54 @@ let inputpassword = {
         $('#olho').css('background-size', '50%');
         $('#olho').css('background-position', '50%');
     }
+},
+//metodos de notificacão de error e pequenos avisos
+notific = {
+    error: (msg) => {
+        $("body").append("<div class='projthis-notific-error'>"
+        + "<span class='icon'></span>"
+        + "<span>"+ msg + "</span>"
+        + "</div>");
+        
+        setTimeout(() => {
+            $(".projthis-notific-error").hide();
+        },4000);
+    },
+    success: (msg) => {
+        
+        $("body").append("<div class='projthis-notific-success'>"
+        + "<span class='icon'></span>"
+        + "<span>"+ msg + "</span>"
+        + "</div>");
+        
+        setTimeout(() => {
+            $(".projthis-notific-success").hide();
+        },4000);
+    },
+    warning: (msg) => {
+        
+        $("body").append("<div class='projthis-notific-warning'>"
+        + "<span class='icon'></span>"
+        + "<span>"+ msg + "</span>"
+        + "</div>");
+        
+        setTimeout(() => {
+            $(".projthis-notific-warning").hide();
+        },4000);
+    }
 };
+
+
 $('#olho').on('click', () => {
     let input = document.getElementById('senha-default');
     input.getAttribute('type') == 'password' ? inputpassword.show(): inputpassword.hide();
 });
+
+//formatação de divs padrão
+$(".projthis-container-wight, .projthis-container-blue, .projthis-container").css(
+    "height", window.innerHeight + "px"
+);
+
 //#endregion
 
 
