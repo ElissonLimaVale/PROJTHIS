@@ -24,7 +24,7 @@ session_start();
 
     <div id="cadastro">
         
-        <div id = "logo"></div> 
+        <div id = "logotipo"></div> 
 
         <h2 id="title">Crie sua conta!</h2>
 
@@ -35,15 +35,14 @@ session_start();
 
             <input class="input-logon" type="email" name="email" placeholder="E-mail" required/>
 
-            <input class="input-logon" type="password" name="senha" placeholder="Senha" required/>
+            <div class="projthis-input-password"></div>
 
             <button id="cadastrar">Cadastrar</button>
+
+            <p id="termos-condicoes">Ao se cadastrar você aceita automaticamente nossos <br/> <a href="#">Termos e Condições</a></p>
+
+            <h3 id="conta-entrar">Já tem uma conta? <a id="entre">Entre</a></h3>
         </div>
-
-        <p id="termos-condicoes">Ao se cadastrar você aceita automaticamente nossos <br/> <a href="#">Termos e Condições</a></p>
-
-    
-        <h3 id="conta-entrar">Já tem uma conta? <a id="entre">Entre</a></h3>
 
         
         <div id="left1" class="colunas"></div>
