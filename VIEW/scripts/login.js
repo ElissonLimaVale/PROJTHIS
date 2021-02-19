@@ -108,7 +108,7 @@ $("#cadastrar").on("click", () => {
             loadHide();
             bootbox.alert(data.mensagem, () => {
                 if(data.data){
-                    window.location.href = "/projthis/view";
+                    window.location.href = "/projthis/view/";
                 }
             });
         }).fail((error) => {
