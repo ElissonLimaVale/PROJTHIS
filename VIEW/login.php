@@ -24,7 +24,7 @@ session_start();
 
     <div id="cadastro">
         
-        <div id = "logo"></div> 
+        <div id = "logotipo"></div> 
 
         <h2 id="title">Crie sua conta!</h2>
 

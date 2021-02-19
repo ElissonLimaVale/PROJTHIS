@@ -543,4 +543,94 @@
         height: 100vh;
         position: absolute;
     }
+
+    .projthis-notific-error {
+        position: absolute;
+        right: 20px;
+        top: 70px;
+        width: auto;
+        border-radius: 2px;
+        padding: 10px;
+        background-color: #ff393957;
+        animation: notific .4s linear;
+        transition: 1s;
+    }
+
+    .projthis-notific-error span {
+        color:rgba(141, 1, 1, 0.931);
+        font-size: 1.2vw;
+        font-weight: 700;
+        padding: 10px;
+    }
+
+    .projthis-notific-error .icon {
+        margin-left: 5px;
+        background: url('../imagens/projthis-error1.png') no-repeat;
+        background-position: 50%;
+        background-size: 100%;
+        width: 50px;
+        height: 50px;
+    }
+    
+    .projthis-notific-success {
+        position: absolute;
+        right: 20px;
+        top: 70px;
+        width: auto;
+        border-radius: 2px;
+        padding: 10px;
+        background-color: #50ff3152;
+        animation: notific .4s linear;
+        transition: 1s;
+    }
+
+    .projthis-notific-success span {
+        color:rgba(0, 129, 17, 0.931);
+        font-size: 1.2vw;
+        font-weight: 700;
+        padding: 10px;
+    }
+
+    .projthis-notific-success .icon {
+        margin-left: 5px;
+        background: url('../imagens/projthis-success.png') no-repeat;
+        background-position: 50%;
+        background-size: 100%;
+        width: 50px;
+        height: 50px;
+    }
+
+    .projthis-notific-warning {
+        position: absolute;
+        right: 20px;
+        top: 70px;
+        width: auto;
+        border-radius: 2px;
+        padding: 10px;
+        background-color: #ffb73185;
+        animation: notific .4s linear;
+        transition: 1s;
+    }
+
+    .projthis-notific-warning span {
+        color:rgba(151, 103, 0, 0.931);
+        font-size: 1.2vw;
+        font-weight: 700;
+        padding: 10px;
+    }
+
+    .projthis-notific-warning .icon {
+        margin-left: 5px;
+        background: url('../imagens/projthis-warning1.png') no-repeat;
+        background-position: 50%;
+        background-size: 100%;
+        width: 50px;
+        height: 50px;
+    }
+
+
+    @keyframes notific {
+        0%{top: 620px;opacity: 0%;}
+        100%{top: 70px;opacity: 100%;}
+    }
 }

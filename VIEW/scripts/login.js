@@ -1,8 +1,8 @@
 
 //#region  ESCOLHA DE TELA LOGIN
 $(document).ready(() => {
-    $('#cadastro').css('height', window.innerHeight + 'px');
-    $('.login-bar').css('height', (window.innerHeight / 2) + (window.innerHeight / 3) + 'px');
+    // $('#cadastro').css('height', window.innerHeight + 'px');
+    // $('.login-bar').css('height', (window.innerHeight / 2) + (window.innerHeight / 3) + 'px');
     var query = location.search.slice(1);
     var partes = query.split('&');
     var data = {};

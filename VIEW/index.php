@@ -98,7 +98,9 @@ include "../CONTROLLER/LoginController.php";
             </div>
         </div>
         
-        <div id="profile-data" class="projthis-container-50">
+        <div id="profile-data" class="projthis-container-50" style=margin-top:70px;>
+        <label class="projthis-title"><?=$_SESSION["usuario"]["nome"]?></label><br/>
+        <label class="projthis-sub-title"><?=$_SESSION["usuario"]["email"]?></label>
         </div>
     </div>
     

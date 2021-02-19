@@ -78,6 +78,10 @@
 
 </div>
 
+<!-- <div class="projthis-notific-error">
+    <span class="icon"></span>
+    <span>Ops, Osorreu um erro!</span>
+</div> -->
 
 <canvas></canvas>
 <div class='col-md-3 col-md-6'>
