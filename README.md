@@ -1,6 +1,6 @@
 # PROJTHIS
  
-Projeto de site para desenvolvedores e iniciantes publicarem seus projetos, como jogos de navegadores com tecnologia front end, Quiz e qualquer tipo de aplicação front end para entreter usuarios ou apenas compartilhar o projeto.
+Site para desenvolvedores e iniciantes publicarem seus projetos, como jogos de navegadores com tecnologia front end, Quiz e qualquer tipo de aplicação front end para entreter usuarios ou apenas compartilhar o projeto.
 
 O site também terá uma comunidade pública para todos conversarem sobre assuntos diversos e debaterem ideias de projetos, ou também, o usuario poderá criar sua comunidade e adicionar membros, escolher moderadores, assim como também pode solicitar participação em outras comunidades criadas por outros usuários.
 
